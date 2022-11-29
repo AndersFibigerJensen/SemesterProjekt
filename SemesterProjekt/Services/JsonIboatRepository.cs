@@ -1,4 +1,5 @@
-﻿using SemesterProjekt.Interfaces;
+﻿using SemesterProjekt.Helpers;
+using SemesterProjekt.Interfaces;
 using SemesterProjekt.Model;
 
 namespace SemesterProjekt.Services
@@ -7,9 +8,11 @@ namespace SemesterProjekt.Services
     {
         string filepath =@"Data\JsonBoats";
 
-        public void AddBoat()
+        public void AddBoat(Boat bo)
         {
-            throw new NotImplementedException();
+            List<Boat> boats = GetAllBoats();
+            boats.Add(bo);
+            JsonFileWriter.WritetoJsonBoat(boats,filepath);
         }
 
         public void DeleteBoat()
@@ -19,17 +22,21 @@ namespace SemesterProjekt.Services
 
         public void EditBoat()
         {
-            throw new NotImplementedException();
+            List<Boat> boats = GetAllBoats();
         }
 
         public List<Boat> GetAllBoats()
         {
-            throw new NotImplementedException();
+            return JsonFileReader.ReadJsonBoat(filepath);
         }
 
         public Boat GetBoat(int id)
         {
-            throw new NotImplementedException();
+            List<Boat> boats=GetAllBoats();
+            foreach (Boat item in boats)
+                if (item.Id == id)
+                    return item;
+            return new Boat();
         }
     }
 }

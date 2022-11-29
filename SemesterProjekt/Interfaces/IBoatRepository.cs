@@ -8,7 +8,7 @@ namespace SemesterProjekt.Interfaces
 
         Boat GetBoat(int id);
 
-        void AddBoat();
+        void AddBoat(Boat bo);
 
         void EditBoat();
 
