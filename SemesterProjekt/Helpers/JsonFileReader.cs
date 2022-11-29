@@ -14,7 +14,14 @@ namespace SemesterProjekt.Helpers
                 return JsonSerializer.Deserialize<List<Boat>>(indata);
             }
         }
-
+        public static List<Event> ReadJsonEvent(string jsonFileName)
+        {
+            using (var jsonFileReader = File.OpenText(jsonFileName))
+            {
+                string indata = jsonFileReader.ReadToEnd();
+                return JsonSerializer.Deserialize<List<Event>>(indata);
+            }
+        }
 
     }
 }

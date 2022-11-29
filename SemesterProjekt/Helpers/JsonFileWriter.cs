@@ -19,7 +19,19 @@ namespace SemesterProjekt.Helpers
                 JsonSerializer.Serialize<Boat[]>(writter, Boats.ToArray());
             }
         }
-
+        public static void WritetoJsonEvent(List<Event> Events, string jsonFileName)
+        {
+            //using(FileStream outputStream =File.OpenWrite(jsonFileName))
+            using (FileStream outputStream = File.Create(jsonFileName))
+            {
+                var writter = new Utf8JsonWriter(outputStream, new JsonWriterOptions
+                {
+                    SkipValidation = false,
+                    Indented = true,
+                });
+                JsonSerializer.Serialize<Event[]>(writter, Events.ToArray());
+            }
+        }
 
 
     }
