@@ -19,7 +19,7 @@ namespace SemesterProjekt.Services
             Event eventToRemove = GetEvent(id);
             List<Event> events = GetAllEvents();
             events.Remove(eventToRemove);
-            JsonFileWriter.WritetoJsonBoat(events, filepath);
+            JsonFileWriter.WritetoJsonEvent(events, filepath);
         }
 
         public void EditEvent(Event e)
