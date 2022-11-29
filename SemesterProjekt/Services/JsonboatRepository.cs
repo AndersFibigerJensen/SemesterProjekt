@@ -5,7 +5,7 @@ using SemesterProjekt.Model;
 
 namespace SemesterProjekt.Services
 {
-    public class JsonIboatRepository : IBoatRepository
+    public class JsonboatRepository : IBoatRepository
     {
         string filepath =@"Data\JsonBoats";
 
