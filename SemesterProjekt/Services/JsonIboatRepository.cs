@@ -1,4 +1,5 @@
-﻿using SemesterProjekt.Helpers;
+﻿using Microsoft.Extensions.Logging;
+using SemesterProjekt.Helpers;
 using SemesterProjekt.Interfaces;
 using SemesterProjekt.Model;
 
@@ -15,14 +16,32 @@ namespace SemesterProjekt.Services
             JsonFileWriter.WritetoJsonBoat(boats,filepath);
         }
 
-        public void DeleteBoat()
+        public void DeleteBoat(int id)
         {
-            throw new NotImplementedException();
+            Boat boatToDelete = GetBoat(id);
+            List<Boat> boats = GetAllBoats();
+            boats.Remove(boatToDelete);
+            JsonFileWriter.WritetoJsonBoat(boats, filepath);
         }
 
-        public void EditBoat()
+        public void EditBoat(Boat bo)
         {
-            List<Boat> boats = GetAllBoats();
+          if(bo!=null)
+            {
+                List<Boat> boats = GetAllBoats();
+                foreach(Boat b in boats)
+                {
+                    if(b.Id==bo.Id)
+                    {
+                        bo.Name = b.Name;
+                        bo.Width = b.Width;
+                        bo.Weight = b.Weight;
+                        bo.Length = b.Length;
+                        bo.MinimumCrew = b.MinimumCrew;
+                        bo.TopSpeed = b.TopSpeed;
+                    }
+                }
+            }
         }
 
         public List<Boat> GetAllBoats()

@@ -10,9 +10,9 @@ namespace SemesterProjekt.Interfaces
 
         void AddBoat(Boat bo);
 
-        void EditBoat();
+        void EditBoat(Boat bo);
 
-        void DeleteBoat();
+        void DeleteBoat(int id);
 
         
 
