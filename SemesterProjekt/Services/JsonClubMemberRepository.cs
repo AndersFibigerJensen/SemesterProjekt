@@ -52,5 +52,18 @@ namespace SemesterProjekt.Services
             return null;
 
         }
+
+        public List<ClubMember> SearchForClubMember(string search)
+        {
+            List<ClubMember> searchResult = new List<ClubMember>();
+            foreach (ClubMember member in GetAllClubMembers())
+            {
+                if (member.Name.Contains(search))
+                {
+                    searchResult.Add(member);
+                }
+            }
+            return searchResult;
+        }
     }
 }
