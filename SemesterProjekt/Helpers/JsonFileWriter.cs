@@ -33,7 +33,7 @@ namespace SemesterProjekt.Helpers
             }
         }
 
-        public static void WritetoJsonEvent(List<RentalPeriod> rentalPeriods, string jsonFileName)
+        public static void WritetoJsonRentalPeriod(List<RentalPeriod> rentalPeriods, string jsonFileName)
         {
             //using(FileStream outputStream =File.OpenWrite(jsonFileName))
             using (FileStream outputStream = File.Create(jsonFileName))
