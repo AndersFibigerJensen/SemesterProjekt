@@ -8,7 +8,7 @@
 
         public bool Verification { get; set; }
 
-
+        public CrewMember CrewMember { get; set; }
 
     }
 }
