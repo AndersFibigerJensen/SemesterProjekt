@@ -14,7 +14,7 @@ namespace SemesterProjekt.Interfaces
 
         void DeleteBoat(int id);
 
-        
+        List<Boat> FilterBoats(string filter);
 
 
     }
