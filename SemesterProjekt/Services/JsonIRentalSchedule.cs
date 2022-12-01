@@ -5,7 +5,7 @@ using System.Runtime.CompilerServices;
 
 namespace SemesterProjekt.Services
 {
-    public class JsonRentalSchedule : IRentalSchedule
+    public class JsonIRentalSchedule : IRentalSchedule
     {
 
         string filepath = @"Data\RentalPeriod";
@@ -19,9 +19,20 @@ namespace SemesterProjekt.Services
 
         public void EditRentalPeriod(RentalPeriod re)
         {
-            List<RentalPeriod> periods = new List<RentalPeriod>();
-            foreach(RentalPeriod period in periods)
-            JsonFileWriter.WritetoJsonRentalPeriod(periods, filepath);
+            
+            if(re != null)
+            {
+                List<RentalPeriod> periods = GetAllRentalPeriods();
+                foreach (RentalPeriod period in periods)
+                {
+                    if(re.Id == period.Id)
+                    {
+                        re.Verification = period.Verification;
+                        re.Rentalperiod= period.Rentalperiod;
+                    }
+
+                }
+            }
         }
 
         public List<RentalPeriod> GetAllRentalPeriods()
@@ -43,8 +54,9 @@ namespace SemesterProjekt.Services
 
         public void RemoveRentalPeriod(int id)
         {
+            RentalPeriod period =GetRentalPeriod(id);
             List<RentalPeriod> periods = new List<RentalPeriod>();
-            throw new NotImplementedException();
+            periods.Remove(period);
             JsonFileWriter.WritetoJsonRentalPeriod(periods, filepath);
         }
     }
