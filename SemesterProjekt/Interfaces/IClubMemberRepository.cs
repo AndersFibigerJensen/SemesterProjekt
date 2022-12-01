@@ -9,5 +9,6 @@ namespace SemesterProjekt.Interfaces
         void AddClubMember(ClubMember clubMember);
         void EditClubMember(ClubMember clubMember);
         void DeleteClubMember(int id);
+        List<ClubMember> SearchForClubMember(string search);
     }
 }
