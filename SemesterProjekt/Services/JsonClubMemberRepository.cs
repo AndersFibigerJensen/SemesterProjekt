@@ -6,7 +6,7 @@ namespace SemesterProjekt.Services
 {
     public class JsonClubMemberRepository : IClubMemberRepository
     {
-        string filepath = @"Data/JsonClubMembers";
+        string filepath = @"Data\JsonClubMembers.json";
         public void AddClubMember(ClubMember clubMember)
         {
             List<ClubMember> clubMembers = GetAllClubMembers();

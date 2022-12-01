@@ -1,4 +1,33 @@
 ﻿@page
 @model SemesterProjekt.Pages.Clubmember.IndexModel
+@using SemesterProjekt.Interfaces;
+@inject IClubMemberRepository repository;
 @{
+    ViewData["Title"] = "Clubmembers";
 }
+
+<h1>List of all clubmembers</h1>
+
+<form>
+    search: <input type="text" asp-for="SearchCriteria"/>
+    <input type="submit" value="Search"/>
+</form>
+<table class="table">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Age</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach(var item in Model.ClubMembers)
+        {
+            <tr>
+                <td>@item.Id</td>
+                <td>@item.Name</td>
+                <td>@item.Age</td>
+            </tr>
+        }
+    </tbody>
+</table>

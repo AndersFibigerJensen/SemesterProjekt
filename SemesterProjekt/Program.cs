@@ -1,7 +1,11 @@
+using SemesterProjekt.Services;
+using SemesterProjekt.Interfaces;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddRazorPages();
+builder.Services.AddTransient<IClubMemberRepository, JsonClubMemberRepository>();
 
 var app = builder.Build();
 
