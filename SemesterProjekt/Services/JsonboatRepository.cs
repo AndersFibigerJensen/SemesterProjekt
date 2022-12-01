@@ -44,6 +44,19 @@ namespace SemesterProjekt.Services
             }
         }
 
+        public List<Boat> FilterBoats(string filter)
+        {
+            List<Boat> Boatlist = new List<Boat>();
+            foreach(var item in GetAllBoats())
+            {
+                if(item.Name==filter)
+                {
+                    Boatlist.Add(item);
+                }
+            }
+            return Boatlist;
+        }
+
         public List<Boat> GetAllBoats()
         {
             return JsonFileReader.ReadJsonBoat(filepath);
@@ -57,5 +70,6 @@ namespace SemesterProjekt.Services
                     return item;
             return new Boat();
         }
+
     }
 }

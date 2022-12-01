@@ -14,7 +14,9 @@
 
         public double TopSpeed { get; set; }
 
-        public int MinimumCrew { get; set; } //Test
+        public int MinimumCrew { get; set; } 
+
+        public List<CrewMember> Crewlist { get; set; }
 
     }
 }
