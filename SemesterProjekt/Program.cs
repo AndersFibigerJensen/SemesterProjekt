@@ -5,7 +5,7 @@ var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddRazorPages();
-builder.Services.AddTransient<IBoatRepository, JsonboatRepository>()
+builder.Services.AddTransient<IBoatRepository, JsonboatRepository>();
 
 var app = builder.Build();
 
