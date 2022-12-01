@@ -47,6 +47,19 @@ namespace SemesterProjekt.Helpers
             }
         }
 
+        public static void WritetoJsonClubMembers(List<ClubMember> clubMembers, string jsonFileName)
+        {
+            //using(FileStream outputStream =File.OpenWrite(jsonFileName))
+            using (FileStream outputStream = File.Create(jsonFileName))
+            {
+                var writter = new Utf8JsonWriter(outputStream, new JsonWriterOptions
+                {
+                    SkipValidation = false,
+                    Indented = true,
+                });
+                JsonSerializer.Serialize<ClubMember[]>(writter, clubMembers.ToArray());
+            }
+        }
 
     }
 }
