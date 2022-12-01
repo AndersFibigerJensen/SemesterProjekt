@@ -23,5 +23,14 @@ namespace SemesterProjekt.Helpers
             }
         }
 
+        public static List<RentalPeriod> ReadJsonRentalPeriod(string jsonFileName)
+        {
+            using (var jsonFileReader = File.OpenText(jsonFileName))
+            {
+                string indata = jsonFileReader.ReadToEnd();
+                return JsonSerializer.Deserialize<List<RentalPeriod>>(indata);
+            }
+        }
+
     }
 }
