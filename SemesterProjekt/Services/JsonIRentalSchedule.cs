@@ -28,7 +28,7 @@ namespace SemesterProjekt.Services
                     if(re.Id == period.Id)
                     {
                         re.Verification = period.Verification;
-                        re.Rentalperiod= period.Rentalperiod;
+                        re.RentalperiodTo = period.RentalperiodTo;
                     }
 
                 }
