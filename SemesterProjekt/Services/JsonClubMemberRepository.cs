@@ -58,7 +58,8 @@ namespace SemesterProjekt.Services
             List<ClubMember> searchResult = new List<ClubMember>();
             foreach (ClubMember member in GetAllClubMembers())
             {
-                if (member.Name.Contains(search))
+
+                if (member.Name.ToLower().Contains(search.ToLower()))
                 {
                     searchResult.Add(member);
                 }
