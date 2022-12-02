@@ -1,55 +1,44 @@
 [
-    {
-        "Id": 1,
-        "Name": "Carl Nielsen",
-        "Age" :  38
-
-    },
-
   {
-
+    "Id": 1,
+    "Name": "Carl Nielsen",
+    "Age": 38,
+    "Email": "carlnielsen@gmail.com",
+    "Password": "password1"
+  },
+  {
     "Id": 2,
     "Name": "Lars Larsen",
-    "Age": 52
-
+    "Age": 52,
+    "Email": "larslarsen@gmail.com",
+    "Password": "password2"
   },
-
   {
-
     "Id": 3,
-    "Name": "Søren Bundgård",
-    "Age": 18
-
+    "Name": "S\u00F8ren Bundg\u00E5rd",
+    "Age": 18,
+    "Email": "s\u00F8renbundg\u00E5rd@gmail.com",
+    "Password": "password3"
   },
-
   {
-
     "Id": 4,
-    "Name": "Maria Løkke",
-    "Age": 23
-
+    "Name": "Maria L\u00F8kke",
+    "Age": 23,
+    "Email": "marial\u00F8kke@gmail.com",
+    "Password": "password4"
   },
-
   {
-
     "Id": 5,
-    "Name": "Hannah Bundgård",
-    "Age": 15
-
+    "Name": "Hannah Bundg\u00E5rd",
+    "Age": 15,
+    "Email": "hannahbundg\u00E5rd@gmail.com",
+    "Password": "password5"
   },
-
   {
-
     "Id": 6,
     "Name": "Jonathan Sims",
-    "Age": 30
-
-  }
-
-
-
-
-
-
-
-] 
+    "Age": 30,
+    "Email": "jonathansims@gmail.com",
+    "Password": "password6"
+  },
+]

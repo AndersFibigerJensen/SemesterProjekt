@@ -1,0 +1,32 @@
+﻿@page
+@model SemesterProjekt.Pages.Clubmember.AddMemberModel
+@{
+    ViewData["Title"] = "Create new member";
+}
+
+<h1>Create new member</h1>
+<form method="post">
+    <div class="form-group">
+        <label asp-for="@Model.ClubMember.Id"></label>
+        <input asp-for="@Model.ClubMember.Id" />
+    </div>
+    <div class="form-group">
+        <label asp-for="@Model.ClubMember.Name"></label>
+        <input asp-for="@Model.ClubMember.Name" />
+    </div>
+    <div class="form-group">
+        <label asp-for="@Model.ClubMember.Age"></label>
+        <input asp-for="@Model.ClubMember.Age" />
+    </div>
+    <div class="form-group">
+        <label asp-for="@Model.ClubMember.Email"></label>
+        <input asp-for="@Model.ClubMember.Email" />
+    </div>
+    <div class="form-group">
+        <label asp-for="@Model.ClubMember.Password"></label>
+        <input asp-for="@Model.ClubMember.Password" />
+    </div>
+     <div class="formgroup">
+        <input type="submit" value="Create" class="btn btn-primary" />
+     </div>
+</form>
