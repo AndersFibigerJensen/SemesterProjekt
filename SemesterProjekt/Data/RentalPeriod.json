@@ -2,21 +2,15 @@
   {
     "Id": 1,
     "RentalperiodFrom": "2022-11-25T08:55:00",
-    "RentalperiodTo": null,
-    "Verification": true
-
-  }
-
-
+    "RentalperiodTo": "2022-11-26T08:55:00",
+    "Verification": false,
+    "CrewMember": null
+  },
   {
-    "Id": 1,
-    "RentalperiodFrom": "2022-11-25T08:55:00",
-    "RentalperiodTo": null,
-    "Verification": true
-
+    "Id": 2,
+    "RentalperiodFrom": "2022-12-25T08:55:00",
+    "RentalperiodTo": "2022-12-25T08:55:00",
+    "Verification": true,
+    "CrewMember": null
   }
-
-
 ]
-
-

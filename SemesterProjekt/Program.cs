@@ -7,6 +7,7 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddRazorPages();
 builder.Services.AddTransient<IBoatRepository, JsonboatRepository>();
 builder.Services.AddTransient<IClubMemberRepository, JsonClubMemberRepository>();
+builder.Services.AddTransient<IRentalSchedule, JsonIRentalSchedule>();
 
 var app = builder.Build();
 

@@ -1,0 +1,23 @@
+﻿@page
+@model SemesterProjekt.Pages.RentalPeriods.RentalEditModel
+@{
+    ViewData["title"] = "edit rental";
+}
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <input asp-for=@Model.RentalPeriod.Id type="hidden" />
+            <div class="form-group">
+                <label asp-for="@Model.RentalPeriod.RentalperiodFrom" class="control-label"></label>
+                <input asp-for="@Model.RentalPeriod.RentalperiodFrom" class="control-label" />
+            </div>
+            <div class="form-group">
+                <label asp-for="@Model.RentalPeriod.RentalperiodTo" class="control-label"></label>
+                <input asp-for="@Model.RentalPeriod.RentalperiodTo" class="control-label" />
+            </div>
+            <div class>
+                <input type="submit" value="edit" class=" btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>

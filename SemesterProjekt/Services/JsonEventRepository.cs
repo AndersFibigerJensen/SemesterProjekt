@@ -5,7 +5,7 @@ namespace SemesterProjekt.Services
 {
     public class JsonEventRepository : IEventRepository
     {
-        string filepath = @"Data\JsonEvents";
+        string filepath = @"Data\JsonEvents.json";
 
         public void AddEvent(Event e)
         {

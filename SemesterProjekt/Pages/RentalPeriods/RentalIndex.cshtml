@@ -8,19 +8,20 @@
 <table class="table">
     <thead>
         <tr>
-            <td> Id </td>
-            <td> from the </td>
-            <td> to the </td>
+            <th> Id </th>
+            <th> from the </th>
+            <th> to the </th>
         </tr>
     </thead>
     <tbody>
-        <tr>
-            @foreach(var item in Model.Periods)
-            {
+        @foreach (var item in Model.Periods)
+        {
+            <tr>
                 <td>@item.Id</td>
                 <td>@item.RentalperiodFrom</td>
                 <td>@item.RentalperiodTo</td>
-            }
-        </tr>
-    </tbody>
-</table>
+                <td><a asp-page="RentalEdit" asp-route-id="@item.Id">Edit</a></td>
+            </tr>
+        }
+        </tbody>
+    </table>
