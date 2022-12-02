@@ -16,7 +16,12 @@
 
         public int MinimumCrew { get; set; } 
 
-        public List<CrewMember> Crewlist { get; set; }
+        public List<ClubMember> Crewlist { get; set; }
+
+        public Boat()
+        {
+            Crewlist = new List<ClubMember>();
+        }
 
     }
 }

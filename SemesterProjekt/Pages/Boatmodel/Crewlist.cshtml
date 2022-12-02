@@ -1,0 +1,26 @@
+﻿@page
+@model SemesterProjekt.Pages.Boatmodel.CrewlistModel
+@{
+    ViewData["title"] = "Crewlist";
+}
+<h1>crewlist</h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            <td>name</td>
+            <td>age</td>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.Crewlist)
+        {
+            <tr>
+                <td>@item.Name</td>
+                <td>@item.Age</td>
+            </tr>
+        }
+    </tbody>
+
+
+</table>
