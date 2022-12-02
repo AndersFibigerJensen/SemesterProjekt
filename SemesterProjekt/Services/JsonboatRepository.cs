@@ -7,7 +7,7 @@ namespace SemesterProjekt.Services
 {
     public class JsonboatRepository : IBoatRepository
     {
-        string filepath =@"Data\JsonBoats";
+        string filepath =@"Data\JsonBoats.json";
 
         public void AddBoat(Boat bo)
         {

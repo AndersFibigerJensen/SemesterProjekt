@@ -14,19 +14,20 @@
     </p>
 </form>
 
-<table class>
+<table class="table">
     <thead>
         <tr>
-            <td>Id</td>
-            <td>Name</td>
-            <td>Length</td>
-            <td>width</td>
-            <td>weight</td>
-            <td>topspeed</td>
-            <td>Minimumcrew</td>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Length</th>
+            <th>width</th>
+            <th>weight</th>
+            <th>topspeed</th>
+            <th>Minimumcrew</th>
         </tr>
     </thead>
     <tbody>
+
         @foreach(var item in Model.Boats)
         {
             <tr>
@@ -41,7 +42,4 @@
         }
 
     </tbody>
-
-
-
 </table>
