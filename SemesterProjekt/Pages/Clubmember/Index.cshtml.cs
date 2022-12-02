@@ -13,6 +13,8 @@ namespace SemesterProjekt.Pages.Clubmember
             memberRepository = clubMemberRepository;
         }
         public List<ClubMember> ClubMembers { get; private set; }
+
+        [BindProperty(SupportsGet = true)]
         public string SearchCriteria { get; set; }
 
 
@@ -23,6 +25,7 @@ namespace SemesterProjekt.Pages.Clubmember
             {
                 ClubMembers = memberRepository.SearchForClubMember(SearchCriteria);
             }
+
             return Page();
         }
     }
