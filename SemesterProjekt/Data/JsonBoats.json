@@ -1,10 +1,10 @@
 [
   {
     "Id": 1,
-    "Name": "a",
+    "Name": "andre",
     "Length": 2.5,
-    "Width": 1,
-    "Weight": 800,
+    "Width": 0,
+    "Weight": 0,
     "TopSpeed": 14.05,
     "MinimumCrew": 2,
     "Crewlist": []
@@ -27,6 +27,16 @@
     "Weight": 1000,
     "TopSpeed": 14,
     "MinimumCrew": 13,
+    "Crewlist": []
+  },
+  {
+    "Id": 1,
+    "Name": "andre",
+    "Length": 2.5,
+    "Width": 0,
+    "Weight": 0,
+    "TopSpeed": 14.05,
+    "MinimumCrew": 2,
     "Crewlist": []
   }
 ]

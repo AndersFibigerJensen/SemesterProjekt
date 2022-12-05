@@ -28,7 +28,7 @@ namespace SemesterProjekt.Pages.Boatmodel
             {
                 return Page();
             }
-            boatRepository.AddBoat(Boat);
+            boatRepository.EditBoat(Boat);
             return RedirectToPage("IndexBoat");
         }
     }

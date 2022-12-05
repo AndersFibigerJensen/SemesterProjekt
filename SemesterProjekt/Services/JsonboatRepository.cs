@@ -52,14 +52,15 @@ namespace SemesterProjekt.Services
                 {
                     if(b.Id==bo.Id)
                     {
-                        bo.Name = b.Name;
-                        bo.Width = b.Width;
-                        bo.Weight = b.Weight;
-                        bo.Length = b.Length;
-                        bo.MinimumCrew = b.MinimumCrew;
-                        bo.TopSpeed = b.TopSpeed;
+                        b.Name = bo.Name;
+                        b.Width = bo.Width;
+                        b.Weight = bo.Weight;
+                        b.Length = bo.Length;
+                        b.MinimumCrew = bo.MinimumCrew;
+                        b.TopSpeed = bo.TopSpeed;
                     }
                 }
+                JsonFileWriter.WritetoJsonBoat(boats,filepath);
             }
         }
 
