@@ -1,4 +1,18 @@
 ﻿@page
 @model SemesterProjekt.Pages.Boatmodel.DeleteBoatModel
 @{
+    ViewData["Title"] = "delete a boat";
 }
+<h1> delete a boat</h1>
+<p>
+    <h2>@Model.Boat.Name</h2>
+    <h3>@Model.Boat.Weight</h3>
+    <h4>@Model.Boat.Length</h4>
+    <h5>@Model.Boat.TopSpeed</h5>
+    <h6>@Model.Boat.MinimumCrew</h6>
+</p>
+<form method="post">
+    <input asp-for="@Model.Boat.Id" type="hidden" />
+    <input type="submit" value="Delete" />
+    <a asp-page="RentalIndex">Cancel</a>
+</form>

@@ -5,8 +5,12 @@ namespace SemesterProjekt.Pages.Boatmodel
 {
     public class AddCrewmemberModel : PageModel
     {
+
+
+
         public void OnGet()
         {
+
         }
     }
 }
