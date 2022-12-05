@@ -12,7 +12,7 @@ namespace SemesterProjekt.Services
 
         public void AddRentalPeriod(RentalPeriod re)
         {
-            List<RentalPeriod> periods = new List<RentalPeriod>();
+            List<RentalPeriod> periods = GetAllRentalPeriods();
             periods.Add(re);
             JsonFileWriter.WritetoJsonRentalPeriod(periods,filepath);
         }
@@ -55,7 +55,7 @@ namespace SemesterProjekt.Services
         public void RemoveRentalPeriod(int id)
         {
             RentalPeriod period =GetRentalPeriod(id);
-            List<RentalPeriod> periods = new List<RentalPeriod>();
+            List<RentalPeriod> periods = GetAllRentalPeriods();
             periods.Remove(period);
             JsonFileWriter.WritetoJsonRentalPeriod(periods, filepath);
         }
