@@ -14,7 +14,7 @@ namespace SemesterProjekt.Pages.RentalPeriods
 
         public RentalDeleteModel(IRentalSchedule rental)
         {
-            schedule = rental;
+            this.schedule = rental;
         }
 
 

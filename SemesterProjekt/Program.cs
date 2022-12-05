@@ -1,3 +1,4 @@
+using SemesterProjekt;
 using SemesterProjekt.Interfaces;
 using SemesterProjekt.Services;
 
@@ -8,6 +9,7 @@ builder.Services.AddRazorPages();
 builder.Services.AddTransient<IBoatRepository, JsonboatRepository>();
 builder.Services.AddTransient<IClubMemberRepository, JsonClubMemberRepository>();
 builder.Services.AddTransient<IRentalSchedule, JsonIRentalSchedule>();
+builder.Services.AddTransient<IEventRepository, JsonEventRepository>();
 
 var app = builder.Build();
 

@@ -2,30 +2,31 @@
   {
     "Id": 1,
     "Name": "a",
-    "Length": 2.50,
-    "Width": 1.00,
+    "Length": 2.5,
+    "Width": 1,
     "Weight": 800,
     "TopSpeed": 14.05,
-    "MinimumCrew": 2
-
+    "MinimumCrew": 2,
+    "Crewlist": []
   },
-
   {
-
     "Id": 2,
     "Name": "",
-    "Length": 2.50,
-    "Width": 1.00,
+    "Length": 2.5,
+    "Width": 1,
     "Weight": 800,
     "TopSpeed": 14.05,
-    "MinimumCrew": 2
-
+    "MinimumCrew": 2,
+    "Crewlist": []
+  },
+  {
+    "Id": 3,
+    "Name": "a",
+    "Length": 14,
+    "Width": 14,
+    "Weight": 1000,
+    "TopSpeed": 14,
+    "MinimumCrew": 13,
+    "Crewlist": []
   }
-
-
-
-
-
-
-
-] 
+]

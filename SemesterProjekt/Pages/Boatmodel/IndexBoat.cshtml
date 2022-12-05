@@ -6,7 +6,7 @@
 }
 
 <h1>List of boats</h1>
-
+<a asp-page="AddBoat"> create a new boat</a>
 <form method="post">
     <p>
         Search <input type="text" asp-for="@Model.FilterCriteria" />
@@ -39,6 +39,9 @@
                 <td>@item.TopSpeed</td>
                 <td>@item.MinimumCrew</td>
                 <td> <a asp-page="Crewlist" asp-route-id=@item.Id>crewlist</a> </td>
+                <td> <a asp-page="EditBoat" asp-route-id=@item.Id>Edit</a></td>
+                <td> <a asp-page="DeleteBoat" asp-route-id=@item.Id>Delete</a></td>
+
             </tr>
         }
 
