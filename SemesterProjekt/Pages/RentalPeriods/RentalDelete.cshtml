@@ -1,0 +1,17 @@
+﻿@page
+@model SemesterProjekt.Pages.RentalPeriods.RentalDeleteModel
+@{
+    ViewData["title"] = "delete rental";
+}
+<h1>delete rental</h1>
+
+<p>
+    <h2> vil du slette denne periode</h2>
+    <h3>periode fra @Model.Period.RentalperiodFrom til @Model.Period.RentalperiodTo</h3>
+</p>
+<form method="post">
+    <input asp-for="@Model.Period.Id" type="hidden" />
+    <input type="submit" value="Delete" />
+    <a asp-page="RentalIndex">Cancel</a>
+</form>
+

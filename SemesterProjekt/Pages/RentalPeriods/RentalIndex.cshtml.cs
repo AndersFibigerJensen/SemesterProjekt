@@ -20,5 +20,6 @@ namespace SemesterProjekt.Pages.RentalPeriods
         {
             Periods = _schedule.GetAllRentalPeriods();
         }
+
     }
 }
