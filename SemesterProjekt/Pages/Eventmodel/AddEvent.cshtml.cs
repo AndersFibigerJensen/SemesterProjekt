@@ -1,9 +1,9 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 
-namespace SemesterProjekt.Pages
+namespace SemesterProjekt.Pages.Eventmodel
 {
-    public class EventIndexModel : PageModel
+    public class AddEventModel : PageModel
     {
         public void OnGet()
         {
