@@ -8,7 +8,7 @@ namespace SemesterProjekt.Services
     public class JsonIRentalSchedule : IRentalSchedule
     {
 
-        string filepath = @"Data\RentalPeriod";
+        string filepath = @"Data\RentalPeriod.json";
 
         public void AddRentalPeriod(RentalPeriod re)
         {
@@ -27,11 +27,12 @@ namespace SemesterProjekt.Services
                 {
                     if(re.Id == period.Id)
                     {
-                        re.Verification = period.Verification;
-                        re.Rentalperiod= period.Rentalperiod;
+                        period.Verification = re.Verification;
+                        period.RentalperiodTo = re.RentalperiodTo;
                     }
 
                 }
+                JsonFileWriter.WritetoJsonRentalPeriod(periods, filepath);
             }
         }
 
@@ -42,14 +43,13 @@ namespace SemesterProjekt.Services
 
         public RentalPeriod GetRentalPeriod(int id)
         {
-            List<RentalPeriod> periods = new List<RentalPeriod>();
+            List<RentalPeriod> periods = GetAllRentalPeriods();
             foreach(RentalPeriod period in periods)
             {
                 if(period.Id == id)
                     return period;
             }
             return new RentalPeriod();
-            JsonFileWriter.WritetoJsonRentalPeriod(periods, filepath);
         }
 
         public void RemoveRentalPeriod(int id)

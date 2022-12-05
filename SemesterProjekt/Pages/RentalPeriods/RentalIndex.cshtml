@@ -1,0 +1,27 @@
+﻿@page
+@model SemesterProjekt.Pages.RentalPeriods.RentalIndexModel
+@{
+    ViewData["title"] = "RentalIndex";
+}
+<h1>Rental list</h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th> Id </th>
+            <th> from the </th>
+            <th> to the </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.Periods)
+        {
+            <tr>
+                <td>@item.Id</td>
+                <td>@item.RentalperiodFrom</td>
+                <td>@item.RentalperiodTo</td>
+                <td><a asp-page="RentalEdit" asp-route-id="@item.Id">Edit</a></td>
+            </tr>
+        }
+        </tbody>
+    </table>

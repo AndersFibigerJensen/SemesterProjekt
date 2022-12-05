@@ -4,7 +4,9 @@
     {
         public int Id { get; set; }
 
-        public DateTime Rentalperiod { get; set; }
+        public DateTime RentalperiodFrom { get; set; }
+
+        public DateTime RentalperiodTo { get; set; }
 
         public bool Verification { get; set; }
 

@@ -16,6 +16,15 @@ namespace SemesterProjekt.Services
             JsonFileWriter.WritetoJsonBoat(boats,filepath);
         }
 
+        public void addCrewmembertoBoats(int id,ClubMember member)
+        {
+            List<Boat> boats=GetAllBoats();
+            Boat boat=GetBoat(id);
+            boat.Crewlist.Add(member);
+            JsonFileWriter.WritetoJsonBoat(boats, filepath);
+        }
+
+
         public void DeleteBoat(int id)
         {
             Boat boatToDelete = GetBoat(id);
@@ -23,6 +32,16 @@ namespace SemesterProjekt.Services
             boats.Remove(boatToDelete);
             JsonFileWriter.WritetoJsonBoat(boats, filepath);
         }
+
+        public void DeleteCrewmember(int id)
+        {
+            Boat boatToDelete = GetBoat(id);
+            List<Boat> boats = GetAllBoats();
+            boats.Remove(boatToDelete);
+            JsonFileWriter.WritetoJsonBoat(boats, filepath);
+        }
+
+
 
         public void EditBoat(Boat bo)
         {
