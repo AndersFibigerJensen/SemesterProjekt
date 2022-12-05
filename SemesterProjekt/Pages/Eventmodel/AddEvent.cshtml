@@ -1,4 +1,35 @@
 ﻿@page
 @model SemesterProjekt.Pages.Eventmodel.AddEventModel
 @{
+    ViewData["title"] = "Add an event";
 }
+<h1> create an Event</h1>
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div class="form-group">
+                <label asp-for="@Model.Event.Id" class="control-label"></label>
+                <input asp-for="@Model.Event.Id" class="control-label" />
+            </div>
+            <div class="form-group">
+                <label asp-for="@Model.Event.Name" class="control-label"></label>
+                <input asp-for="@Model.Event.Name" class="control-label" />
+            </div>
+            <div class="form-group">
+                <label asp-for="@Model.Event.Description" class="control-label"></label>
+                <input asp-for="@Model.Event.Description" class="control-label" />
+            </div>
+            <div class="form-group">
+                <label asp-for="@Model.Event.Description" class="control-label"></label>
+                <input asp-for="@Model.Event.Description" class="control-label" />
+            </div>
+            <div class="form-group">
+                <label asp-for="@Model.Event.Date" class="control-label"></label>
+                <input asp-for="@Model.Event.Date" class="control-label" />
+            </div>
+            <div class="form-group">
+                <input type="submit" value="create Rentalperiod"
+            </div>
+        </form>
+    </div>
+</div>
