@@ -16,6 +16,20 @@
             Password = password;
         }
 
+        public override bool Equals(object? obj)
+        {
+            if (obj == null)
+                return false;
+            else
+            {
+                ClubMember other = (ClubMember)obj;
+                if (other.Id == Id)
+                    return true;
+                else
+                    return false;
+            }
+        }
+
         public ClubMember()
         {
 

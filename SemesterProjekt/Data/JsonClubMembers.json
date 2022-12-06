@@ -40,12 +40,5 @@
     "Age": 30,
     "Email": "jonathansims@gmail.com",
     "Password": "password6"
-  },
-  {
-    "Id": 7,
-    "Name": "Mikkel Hansen",
-    "Age": 20,
-    "Email": "mikkelhansen@gmail.com",
-    "Password": "password7"
   }
 ]

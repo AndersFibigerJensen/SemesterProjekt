@@ -22,10 +22,6 @@ namespace SemesterProjekt.Pages.Clubmember
 
         public IActionResult OnPost()
         {
-            if (!ModelState.IsValid)
-            {
-                return Page();
-            }
             repo.DeleteClubMember(ClubMember.Id);
             return RedirectToPage("Index");
         }

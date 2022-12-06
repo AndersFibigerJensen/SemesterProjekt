@@ -13,7 +13,7 @@ namespace SemesterProjekt.Services
             clubMembers.Add(clubMember);
             JsonFileWriter.WritetoJsonClubMembers(clubMembers,filepath);
         }
-
+        
         public void DeleteClubMember(int id)
         {
             ClubMember clubMemberToDelete = GetClubMember(id);
