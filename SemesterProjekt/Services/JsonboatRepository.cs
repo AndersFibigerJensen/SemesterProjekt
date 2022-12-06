@@ -16,14 +16,6 @@ namespace SemesterProjekt.Services
             JsonFileWriter.WritetoJsonBoat(boats,filepath);
         }
 
-        public void addCrewmembertoBoats(int id,ClubMember member)
-        {
-            List<Boat> boats=GetAllBoats();
-            Boat boat=GetBoat(id);
-            boat.Crewlist.Add(member);
-            JsonFileWriter.WritetoJsonBoat(boats, filepath);
-        }
-
 
         public void DeleteBoat(int id)
         {
@@ -52,14 +44,14 @@ namespace SemesterProjekt.Services
                 {
                     if(b.Id==bo.Id)
                     {
-                        bo.Name = b.Name;
-                        bo.Width = b.Width;
-                        bo.Weight = b.Weight;
-                        bo.Length = b.Length;
-                        bo.MinimumCrew = b.MinimumCrew;
-                        bo.TopSpeed = b.TopSpeed;
+                        b.Name = bo.Name;
+                        b.Width = bo.Width;
+                        b.Weight = bo.Weight;
+                        b.Length = bo.Length;
+                        b.MinimumCrew = bo.MinimumCrew;
                     }
                 }
+                JsonFileWriter.WritetoJsonBoat(boats,filepath);
             }
         }
 

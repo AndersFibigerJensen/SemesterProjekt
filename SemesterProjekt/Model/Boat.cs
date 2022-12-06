@@ -12,16 +12,7 @@
 
         public double Weight { get; set; }
 
-        public double TopSpeed { get; set; }
-
         public int MinimumCrew { get; set; } 
-
-        public List<ClubMember> Crewlist { get; set; }
-
-        public Boat()
-        {
-            Crewlist = new List<ClubMember>();
-        }
 
     }
 }

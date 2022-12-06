@@ -1,0 +1,39 @@
+﻿@page
+@model SemesterProjekt.Pages.Boatmodel.AddBoatModel
+@{
+    ViewData["title"] = "add a boat";
+}
+<h1> add a boat</h1>
+<div class="row">
+    <div class="col-4-md">
+        <form method="post">
+            <div class="form-group">
+                <label asp-for="@Model.Boat.Id" class="control-label"></label>
+                <input asp-for="@Model.Boat.Id" class="control-label" />
+            </div>
+            <div class="form-group">
+                <label asp-for="@Model.Boat.Name" class="control-label"></label>
+                <input asp-for="@Model.Boat.Name" class="control-label" />
+            </div>
+            <div class="form-group">
+                <label asp-for="@Model.Boat.Weight" class="control-label"></label>
+                <input asp-for="@Model.Boat.Weight" class="control-label" />
+            </div>
+            <div class="form-group">
+                <label asp-for="@Model.Boat.Width" class="control-label"></label>
+                <input asp-for="@Model.Boat.Width" class="control-label" />
+            </div>
+            <div class="form-group">
+                <label asp-for="@Model.Boat.Length" class="control-label"></label>
+                <input asp-for="@Model.Boat.Length" class="control-label" />
+            </div>
+            <div class="form-group">
+                <label asp-for="@Model.Boat.MinimumCrew" class="control-label"></label>
+                <input asp-for="@Model.Boat.MinimumCrew" class="control-label" />
+            </div>
+            <div class="form-group">
+                <input type="submit" value="create a boat" class= btn btn-primary />
+            </div>
+        </form>
+    </div>
+</div>

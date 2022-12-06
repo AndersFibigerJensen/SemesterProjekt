@@ -25,12 +25,8 @@ namespace SemesterProjekt.Pages.RentalPeriods
 
         public IActionResult Onpost()
         {
-            if (!ModelState.IsValid)
-            {
-                return Page();
-            }
             schedule.AddRentalPeriod(Period);
-            return RedirectToPage("Index");
+            return RedirectToPage("RentalIndex");
         }
     }
 }

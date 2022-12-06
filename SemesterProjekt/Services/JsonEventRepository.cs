@@ -33,7 +33,8 @@ namespace SemesterProjekt.Services
                     {
                         e.Name = ev.Name;
                         e.Description = ev.Description;
-                        e.Date = ev.Date;
+                        e.FromDate = ev.FromDate;
+                        e.ToDate = ev.ToDate;
                     }
                 }
             }

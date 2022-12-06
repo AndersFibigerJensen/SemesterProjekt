@@ -1,8 +1,16 @@
 [
-
-
-
-
-
-
+  {
+    "Id": 1,
+    "RentalperiodFrom": "2022-12-09T09:50:00",
+    "RentalperiodTo": "2022-12-31T09:50:00",
+    "Verification": false,
+    "CrewMember": null
+  },
+  {
+    "Id": 2,
+    "RentalperiodFrom": "2022-12-17T09:50:00",
+    "RentalperiodTo": "2022-12-30T09:50:00",
+    "Verification": false,
+    "CrewMember": null
+  }
 ]
