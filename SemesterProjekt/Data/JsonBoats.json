@@ -8,14 +8,6 @@
     "MinimumCrew": 2
   },
   {
-    "Id": 2,
-    "Name": "",
-    "Length": 2.5,
-    "Width": 1,
-    "Weight": 800,
-    "MinimumCrew": 2
-  },
-  {
     "Id": 3,
     "Name": "a",
     "Length": 14,

@@ -17,5 +17,19 @@ namespace SemesterProjekt.Model
 
         public CrewMember CrewMember { get; set; }
 
+        public override bool Equals(object? obj)
+        {
+            if (obj == null)
+                return false;
+            else
+            {
+                RentalPeriod other = (RentalPeriod)obj;
+                if (other.Id == Id)
+                    return true;
+                else
+                    return false;
+            }
+        }
+
     }
 }

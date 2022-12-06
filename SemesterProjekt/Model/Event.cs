@@ -19,5 +19,18 @@ namespace SemesterProjekt.Model
         //public List<Event> joinedMembers { get; set; }
         public List<Boat> joinedBoats { get; set; }
 
+        public override bool Equals(object? obj)
+        {
+            if (obj == null)
+                return false;
+            else
+            {
+                Event other = (Event)obj;
+                if (other.Id == Id)
+                    return true;
+                else
+                    return false;
+            }
+        }
     }
 }
