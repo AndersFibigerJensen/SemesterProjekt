@@ -1,25 +1,26 @@
 [
-    {
-        "Id": 1,
-        "Name": "a",
-        "Description": "aaaaaaa",
-        "Date": "2022-11-25T08:55:00"
-
-    },
-
-    {
-
-        "Id": 2,
-        "Name": "b",
-        "Description": "bbbbpphhbb",
-        "Date": "2022-12-22T08:55:00"
-
-    }
-
-
-
-
-
-
-
-] 
+  {
+    "Id": 1,
+    "Name": "a",
+    "Description": "aaaaaaa",
+    "FromDate": "0001-01-01T00:00:00",
+    "ToDate": "0001-01-01T00:00:00",
+    "joinedBoats": null
+  },
+  {
+    "Id": 2,
+    "Name": "b",
+    "Description": "bbbbpphhbb",
+    "FromDate": "0001-01-01T00:00:00",
+    "ToDate": "0001-01-01T00:00:00",
+    "joinedBoats": null
+  },
+  {
+    "Id": 3,
+    "Name": "poul",
+    "Description": "test",
+    "FromDate": "2022-12-02T11:13:00",
+    "ToDate": "2022-12-17T11:13:00",
+    "joinedBoats": null
+  }
+]

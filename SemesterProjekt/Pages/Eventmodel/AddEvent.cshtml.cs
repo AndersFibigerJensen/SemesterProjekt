@@ -8,6 +8,7 @@ namespace SemesterProjekt.Pages.Eventmodel
     {
         private IEventRepository _eventRepository;
 
+        [BindProperty]
         public Event Event { get; set; }
 
         public AddEventModel(IEventRepository eventRepository)
@@ -23,10 +24,6 @@ namespace SemesterProjekt.Pages.Eventmodel
 
         public IActionResult Onpost()
         {
-            if (!ModelState.IsValid)
-            {
-                return Page();
-            }
             _eventRepository.AddEvent(Event);
             return RedirectToPage("EventIndex");
         }

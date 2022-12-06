@@ -16,17 +16,13 @@ namespace SemesterProjekt.Pages.Eventmodel
             _eventRepository = eventRepository;
         }
 
-        public void OnGet()
+        public void OnGet(int id)
         {
-            Event = _eventRepository.GetEvent(Event.Id);
+            Event = _eventRepository.GetEvent(id);
         }
 
         public IActionResult Onpost()
         {
-            if (!ModelState.IsValid)
-            {
-                return Page();
-            }
             _eventRepository.RemoveEvent(Event.Id);
             return RedirectToPage("EventIndex");
         }

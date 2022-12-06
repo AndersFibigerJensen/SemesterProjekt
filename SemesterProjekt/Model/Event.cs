@@ -12,7 +12,10 @@ namespace SemesterProjekt.Model
         public string Description { get; set; }
 
         [Required]
-        public DateTime Date { get; set; }
+        public DateTime FromDate { get; set; }
+
+        public DateTime ToDate { get; set; }
+
         //public List<Event> joinedMembers { get; set; }
         public List<Boat> joinedBoats { get; set; }
 
