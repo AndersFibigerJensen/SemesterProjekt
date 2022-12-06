@@ -1,0 +1,16 @@
+﻿@page
+@model SemesterProjekt.Pages.Eventmodel.DeleteEventModel
+@{
+    ViewData["title"] = "edit an event";
+}
+<p>
+    <h2> vil du slette Event</h2>
+    <h3>@Model.Event.Name</h3>
+    <h4>@Model.Event.Description</h4>
+    <h5>@Model.Event.Date</h5>
+</p>
+<form method="post">
+    <input asp-for="@Model.Event.Id" type="hidden" />
+    <input type="submit" value="Delete" />
+    <a asp-page="EventIndex">Cancel</a>
+</form>
