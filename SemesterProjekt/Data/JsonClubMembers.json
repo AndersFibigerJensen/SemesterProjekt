@@ -47,5 +47,12 @@
     "Age": 20,
     "Email": "mikkelhansen@gmail.com",
     "Password": "password7"
+  },
+  {
+    "Id": 8,
+    "Name": "anders",
+    "Age": 18,
+    "Email": "ande@mail.com",
+    "Password": "120599"
   }
 ]

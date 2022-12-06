@@ -1,17 +1,20 @@
 ﻿@page
 @model SemesterProjekt.Pages.Eventmodel.EventIndexModel
+@using SemesterProjekt.Model
 @{
     ViewData["title"] = "eventindex";
 }
 <h1>liste over events</h1>
 
-<a asp-page="AddEvent"> create a new rentalperiod</a>
+
 <table class="table">
     <thead>
-        <th>ID</th>
-        <th>Name</th>
-        <th>Description</th>
-        <th>Date</th>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Description</th>
+            <th>Date</th>
+        </tr>
     </thead>
     <tbody>
         @foreach(var item in Model.Events)
@@ -25,3 +28,4 @@
         }
     </tbody>
 </table>
+<a asp-page="AddEvent"> create a new Event</a>

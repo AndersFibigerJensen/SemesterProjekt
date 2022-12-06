@@ -6,14 +6,15 @@ namespace SemesterProjekt.Pages.Eventmodel
 {
     public class AddEventModel : PageModel
     {
-        private IEventRepository eventrepo;
+        private IEventRepository _eventRepository;
 
         public Event Event { get; set; }
 
-        public AddEventModel(IEventRepository eventrepo)
+        public AddEventModel(IEventRepository eventRepository)
         {
-            this.eventrepo = eventrepo;
+            _eventRepository = eventRepository;
         }
+
 
         public IActionResult OnGet()
         {
@@ -26,7 +27,7 @@ namespace SemesterProjekt.Pages.Eventmodel
             {
                 return Page();
             }
-            eventrepo.AddEvent(Event);
+            _eventRepository.AddEvent(Event);
             return RedirectToPage("EventIndex");
         }
     }

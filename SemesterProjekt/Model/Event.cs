@@ -10,6 +10,7 @@ namespace SemesterProjekt.Model
         public string Name { get; set; }
         
         public string Description { get; set; }
+
         [Required]
         public DateTime Date { get; set; }
         //public List<Event> joinedMembers { get; set; }
