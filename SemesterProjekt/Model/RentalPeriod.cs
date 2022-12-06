@@ -5,12 +5,15 @@ namespace SemesterProjekt.Model
     public class RentalPeriod
     {
         [Required]
+        [Range(typeof(int), "1", "1000", ErrorMessage = "Id er uden for intervallet")]
         public int Id { get; set; }
 
         [Required]
+        [Range(typeof(DateTime), "18/11/2022", "18/11/2023", ErrorMessage = "Datoen er uden for intervallet")]
         public DateTime RentalperiodFrom { get; set; }
 
         [Required]
+        [Range(typeof(DateTime), "18/11/2022", "18/11/2023", ErrorMessage = "Datoen er uden for intervallet")]
         public DateTime RentalperiodTo { get; set; }
 
         public bool Verification { get; set; }

@@ -23,6 +23,7 @@
             <th>width</th>
             <th>weight</th>
             <th>Minimumcrew</th>
+            <th>boattype</th>
         </tr>
     </thead>
     <tbody>
@@ -36,6 +37,7 @@
                 <td>@item.Width</td>
                 <td>@item.Weight</td>
                 <td>@item.MinimumCrew</td>
+                <td>@item.Type</td>
                 <td> <a asp-page="EditBoat" asp-route-id=@item.Id>Edit</a></td>
                 <td> <a asp-page="DeleteBoat" asp-route-id=@item.Id>Delete</a></td
             </tr>

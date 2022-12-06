@@ -5,7 +5,17 @@
     "Length": 2.5,
     "Width": 0,
     "Weight": 0,
-    "MinimumCrew": 2
+    "MinimumCrew": 2,
+    "Type": "TERA"
+  },
+  {
+    "Id": 2,
+    "Name": "",
+    "Length": 2.5,
+    "Width": 1,
+    "Weight": 800,
+    "MinimumCrew": 2,
+    "Type": "TERA"
   },
   {
     "Id": 3,
@@ -13,7 +23,8 @@
     "Length": 14,
     "Width": 14,
     "Weight": 1000,
-    "MinimumCrew": 13
+    "MinimumCrew": 13,
+    "Type": "TERA"
   },
   {
     "Id": 4,
@@ -21,6 +32,7 @@
     "Length": 2.5,
     "Width": 0,
     "Weight": 0,
-    "MinimumCrew": 2
+    "MinimumCrew": 2,
+    "Type": "TERA"
   }
 ]
