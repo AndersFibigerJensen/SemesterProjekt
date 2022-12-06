@@ -35,6 +35,7 @@ namespace SemesterProjekt.Services
                         member.Age = clubMember.Age;
                     }
                 }
+                JsonFileWriter.WritetoJsonClubMembers(clubMembers, filepath);
             }
         }
 
