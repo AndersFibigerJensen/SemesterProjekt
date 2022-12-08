@@ -1,5 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
+using SemesterProjekt.Interfaces;
 using SemesterProjekt.Model;
 
 namespace SemesterProjekt.Pages.Eventmodel
