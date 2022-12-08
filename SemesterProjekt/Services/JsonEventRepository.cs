@@ -31,11 +31,13 @@ namespace SemesterProjekt.Services
                 {
                     if (ev.Id == e.Id)
                     {
-                        e.Name = ev.Name;
-                        e.Description = ev.Description;
-                        e.Date = ev.Date;
+                        ev.Name = e.Name;
+                        ev.Description = e.Description;
+                        ev.FromDate = e.FromDate;
+                        ev.ToDate=e.ToDate;
                     }
                 }
+                JsonFileWriter.WritetoJsonEvent(events, filepath);
             }
         }
 

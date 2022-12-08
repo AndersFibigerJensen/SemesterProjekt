@@ -22,8 +22,8 @@
             <th>Length</th>
             <th>width</th>
             <th>weight</th>
-            <th>topspeed</th>
             <th>Minimumcrew</th>
+            <th>boattype</th>
         </tr>
     </thead>
     <tbody>
@@ -36,9 +36,8 @@
                 <td>@item.Length</td>
                 <td>@item.Width</td>
                 <td>@item.Weight</td>
-                <td>@item.TopSpeed</td>
                 <td>@item.MinimumCrew</td>
-                <td> <a asp-page="Crewlist" asp-route-id=@item.Id>crewlist</a> </td>
+                <td>@item.Type</td>
                 <td> <a asp-page="EditBoat" asp-route-id=@item.Id>Edit</a></td>
                 <td> <a asp-page="DeleteBoat" asp-route-id=@item.Id>Delete</a></td
             </tr>

@@ -13,7 +13,7 @@ namespace SemesterProjekt.Services
             clubMembers.Add(clubMember);
             JsonFileWriter.WritetoJsonClubMembers(clubMembers,filepath);
         }
-
+        
         public void DeleteClubMember(int id)
         {
             ClubMember clubMemberToDelete = GetClubMember(id);
@@ -35,6 +35,7 @@ namespace SemesterProjekt.Services
                         member.Age = clubMember.Age;
                     }
                 }
+                JsonFileWriter.WritetoJsonClubMembers(clubMembers, filepath);
             }
         }
 

@@ -16,8 +16,6 @@ namespace SemesterProjekt.Interfaces
 
         List<Boat> FilterBoats(string filter);
 
-        void addCrewmembertoBoats(int id,ClubMember member);
-
 
     }
 }

@@ -6,20 +6,4 @@
     <ImplicitUsings>enable</ImplicitUsings>
   </PropertyGroup>
 
-  <ItemGroup>
-    <Content Remove="Pages\Eventmodel\AddEvent.cshtml" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <UpToDateCheckInput Remove="Pages\Eventmodel\AddEvent.cshtml" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <_ContentIncludedByDefault Remove="Pages\Eventmodel\AddEvent.cshtml" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <None Include="Pages\Eventmodel\AddEvent.cshtml" />
-  </ItemGroup>
-
 </Project>

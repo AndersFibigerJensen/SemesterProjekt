@@ -18,8 +18,12 @@
                 <input asp-for="@Model.Event.Description" class="control-label" />
             </div>
             <div class="form-group">
-                <label asp-for="@Model.Event.Date" class="control-label"></label>
-                <input asp-for="@Model.Event.Date" class="control-label" />
+                <label asp-for="@Model.Event.FromDate" class="control-label"></label>
+                <input asp-for="@Model.Event.FromDate" class="control-label" />
+            </div>
+            <div class="form-group">
+                <label asp-for="@Model.Event.ToDate" class="control-label"></label>
+                <input asp-for="@Model.Event.ToDate" class="control-label" />
             </div>
             <div class>
                 <a asp-page="EventIndex">Cancel</a>

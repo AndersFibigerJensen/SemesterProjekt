@@ -1,9 +1,14 @@
-﻿namespace SemesterProjekt.Model
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace SemesterProjekt.Model
 {
     public class Boat
     {
+        [Required]
+        [Range(typeof(int), "1", "1000", ErrorMessage = "Id er uden for intervallet")]
         public int Id { get; set; }
 
+        [Required(ErrorMessage = "du skal skrive et navn")]
         public string Name { get; set; }
 
         public double Length { get; set; }
@@ -12,16 +17,23 @@
 
         public double Weight { get; set; }
 
-        public double TopSpeed { get; set; }
+        public int MinimumCrew { get; set; }
 
-        public int MinimumCrew { get; set; } 
+        
+        public BoatType Type {get; set; }
 
-        public List<ClubMember> Crewlist { get; set; }
-
-        public Boat()
+        public override bool Equals(object? obj)
         {
-            Crewlist = new List<ClubMember>();
+            if (obj == null)
+                return false;
+            else
+            {
+                Boat other = (Boat)obj;
+                if (other.Id == Id)
+                    return true;
+                else
+                    return false;
+            }
         }
-
     }
 }

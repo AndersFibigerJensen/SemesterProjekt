@@ -6,13 +6,15 @@
 }
 <h1>liste over events</h1>
 
-<a asp-page="AddEvent"> create a new rentalperiod</a>
+<a asp-page="AddEvent"> create a new Event</a>
 <table class="table">
     <thead>
-        <th>ID</th>
-        <th>Name</th>
-        <th>Description</th>
-        <th>Date</th>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Description</th>
+            <th>Date</th>
+        </tr>
     </thead>
     <tbody>
         @foreach(var item in Model.Events)
@@ -21,7 +23,10 @@
                 <td>@item.Id</td>
                 <td>@item.Name</td>
                 <td>@item.Description</td>
-                <td>@item.Date</td>
+                <td>@item.FromDate</td>
+                <td>@item.ToDate</td>
+                <td> <a asp-page="EditEvent" asp-route-id="@item.Id">Edit</a> </td>
+                <td><a asp-page="DeleteEvent" asp-route-id="@item.Id">Delete</a> </td>
             </tr>
         }
     </tbody>
