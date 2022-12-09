@@ -41,5 +41,14 @@ namespace SemesterProjekt.Helpers
             }
         }
 
+        public static List<BlogPost> ReadJsonBlogPost(string jsonFileName)
+        {
+            using (var jsonFileReader = File.OpenText(jsonFileName))
+            {
+                string indata = jsonFileReader.ReadToEnd();
+                return JsonSerializer.Deserialize<List<BlogPost>>(indata);
+            }
+        }
+
     }
 }

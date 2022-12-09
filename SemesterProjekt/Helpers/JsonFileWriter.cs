@@ -61,5 +61,18 @@ namespace SemesterProjekt.Helpers
             }
         }
 
+        public static void WritetoJsonBlogPosts(List<BlogPost> blogPosts, string jsonFileName)
+        {
+            using (FileStream outputStream = File.Create(jsonFileName))
+            {
+                var writter = new Utf8JsonWriter(outputStream, new JsonWriterOptions
+                {
+                    SkipValidation = false,
+                    Indented = true,
+                });
+                JsonSerializer.Serialize<BlogPost[]>(writter, blogPosts.ToArray());
+            }
+        }
+
     }
 }

@@ -10,7 +10,7 @@ builder.Services.AddTransient<IBoatRepository, JsonboatRepository>();
 builder.Services.AddTransient<IClubMemberRepository, JsonClubMemberRepository>();
 builder.Services.AddTransient<IRentalSchedule, JsonIRentalSchedule>();
 builder.Services.AddTransient<IEventRepository, JsonEventRepository>();
-
+builder.Services.AddTransient<IBlogRepository, JsonBlogRepository>();
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.

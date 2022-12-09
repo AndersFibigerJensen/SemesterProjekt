@@ -1,0 +1,38 @@
+﻿@page
+@model SemesterProjekt.Pages.Blogmodel.IndexBlogModel
+@using SemesterProjekt.Model
+@{
+	ViewData["title"] = "Blog";
+}
+
+<h1>Blog Posts</h1>
+<a asp-page="AddBlogPost">New Blog Post</a>
+<form method="post">
+	<p>
+		Search <input type="text" asp-for="@Model.FilterCriteria" />
+		<input type="submit" value="Search" />
+	</p>
+</form>
+
+<table class="table">
+	<thead>
+		<tr>
+			<th>PostId</th>
+			<th>Title</th>
+			<th>Text</th>
+		</tr>
+	</thead>
+	<tbody>
+		@foreach(var item in Model.Posts)
+		{
+			<tr>
+				<td>@item.PostId</td>
+				<td>@item.Title</td>
+				<td>@item.Text</td>
+				<td> <a asp-page="EditPost" asp-route-id=@item.PostId>Edit</a></td>
+                <td> <a asp-page="DeletePost" asp-route-id=@item.PostId>Delete</a></td>
+			</tr>
+		}
+	</tbody>
+</table>
+
