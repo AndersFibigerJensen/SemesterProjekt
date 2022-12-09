@@ -6,7 +6,7 @@
     "Width": 0,
     "Weight": 0,
     "MinimumCrew": 2,
-    "BoatType": "TERA"
+    "BoatType": 1
   },
   {
     "Id": 2,
@@ -15,7 +15,7 @@
     "Width": 1,
     "Weight": 800,
     "MinimumCrew": 2,
-    "BoatType": "TERA"
+    "BoatType": 1
   },
   {
     "Id": 3,
@@ -24,7 +24,7 @@
     "Width": 14,
     "Weight": 1000,
     "MinimumCrew": 13,
-    "BoatType": "TERA"
+    "BoatType": 1
   },
   {
     "Id": 4,
@@ -33,6 +33,6 @@
     "Width": 0,
     "Weight": 0,
     "MinimumCrew": 2,
-    "BoatType": "TERA"
+    "BoatType": 1
   }
 ]
