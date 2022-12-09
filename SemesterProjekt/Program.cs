@@ -10,6 +10,7 @@ builder.Services.AddTransient<IBoatRepository, JsonboatRepository>();
 builder.Services.AddTransient<IClubMemberRepository, JsonClubMemberRepository>();
 builder.Services.AddTransient<IRentalSchedule, JsonIRentalSchedule>();
 builder.Services.AddTransient<IEventRepository, JsonEventRepository>();
+builder.Services.AddSingleton<LoginService>();
 
 var app = builder.Build();
 
