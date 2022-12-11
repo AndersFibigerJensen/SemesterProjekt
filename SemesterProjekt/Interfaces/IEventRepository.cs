@@ -8,7 +8,5 @@ namespace SemesterProjekt
         void AddEvent(Event e);
         void RemoveEvent(int id);
         void EditEvent(Event e);
-
-        
     }
 }

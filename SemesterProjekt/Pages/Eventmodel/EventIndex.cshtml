@@ -25,6 +25,7 @@
                 <td>@item.Description</td>
                 <td>@item.FromDate</td>
                 <td>@item.ToDate</td>
+                <td><a asp-page="Boatlist" asp-route-id=@item.Id> boatlist </a> </td>
                 <td> <a asp-page="EditEvent" asp-route-id="@item.Id">Edit</a> </td>
                 <td><a asp-page="DeleteEvent" asp-route-id="@item.Id">Delete</a> </td>
             </tr>

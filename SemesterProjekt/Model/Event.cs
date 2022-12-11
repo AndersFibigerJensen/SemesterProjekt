@@ -22,7 +22,7 @@ namespace SemesterProjekt.Model
         [Range(typeof(DateTime), "18/11/2022", "18/11/2023", ErrorMessage = "Datoen er uden for intervallet")]
         public DateTime ToDate { get; set; }
 
-        //public List<Event> joinedMembers { get; set; }
+        //public List<ClubMember> joinedMembers { get; set; }
         public List<Boat> joinedBoats { get; set; }
 
         public override bool Equals(object? obj)

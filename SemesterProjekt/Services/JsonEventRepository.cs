@@ -1,5 +1,7 @@
 ﻿using SemesterProjekt.Helpers;
 using SemesterProjekt.Model;
+using SemesterProjekt.Interfaces;
+using Microsoft.Extensions.Logging;
 
 namespace SemesterProjekt.Services
 {
@@ -54,5 +56,8 @@ namespace SemesterProjekt.Services
                     return item;
             return new Event();
         }
+
+
+        
     }
 }
