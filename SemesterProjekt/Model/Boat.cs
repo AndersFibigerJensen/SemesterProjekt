@@ -1,4 +1,5 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using System.Text.Json.Serialization;
 
 namespace SemesterProjekt.Model
 {
@@ -19,8 +20,8 @@ namespace SemesterProjekt.Model
 
         public int MinimumCrew { get; set; }
 
-        
-        public BoatType Type {get; set; }
+       
+        public BoatType BoatType {get; set; }
 
         public override bool Equals(object? obj)
         {
