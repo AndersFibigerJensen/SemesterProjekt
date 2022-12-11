@@ -1,4 +1,23 @@
 ﻿@page
 @model SemesterProjekt.Pages.Blogmodel.AddBlogPostModel
 @{
+	ViewData["Title"] = "add a blog post";
 }
+<h1>Make a new post on the blog</h1>
+<div class="row">
+	<div class="col-4-md">
+		<form method="post">
+			<div class="form-group">
+				<label asp-for="@Model.Post.PostId" class="control-label"></label>
+				<input asp-for="@Model.Post.PostId" class="control-label" />
+			</div>
+			<div class="form-group">
+				<label asp-for="@Model.Post.Title" class="control-label"></label>
+				<input asp-for="@Model.Post.Title" class="control-label" />
+			</div>
+			<div class="form-group">
+
+			</div>
+		</form>
+	</div>
+</div>

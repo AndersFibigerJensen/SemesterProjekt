@@ -6,7 +6,7 @@ namespace SemesterProjekt.Services
 {
     public class JsonBlogRepository : IBlogRepository
     {
-        string filepath = @"Data\JsonBlogPosts";
+        string filepath = @"Data\JsonBlogPosts.json";
         public void AddBlogPost(BlogPost post)
         {
             List<BlogPost> posts = GetAllPosts();
