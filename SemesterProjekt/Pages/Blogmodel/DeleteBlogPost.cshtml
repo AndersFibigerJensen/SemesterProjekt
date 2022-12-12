@@ -1,4 +1,15 @@
 ﻿@page
 @model SemesterProjekt.Pages.Blogmodel.DeleteBlogPostModel
 @{
+	ViewData["Title"] = "delete a boat";
 }
+<h1>delete a boat</h1>
+<p>
+	<h1>@Model.Post.Title</h1>
+	<h1>@Model.Post.Text</h1>
+</p>
+<form method="post">
+	<input asp-for="@Model.Post.PostId" type="hidden" />
+	<input type="submit" value="Delete" />
+	<a asp-page="IndexBlog">Cancel</a>
+</form>

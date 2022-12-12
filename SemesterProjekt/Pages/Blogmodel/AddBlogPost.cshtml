@@ -16,7 +16,11 @@
 				<input asp-for="@Model.Post.Title" class="control-label" />
 			</div>
 			<div class="form-group">
-
+				<label asp-for="@Model.Post.Text" class="control-label"></label>
+				<input asp-for="@Model.Post.Text" class="control-label" />
+			</div>
+			<div class="form-group">
+				<input type="submit" value="make post" class= btn btn.primary />
 			</div>
 		</form>
 	</div>
