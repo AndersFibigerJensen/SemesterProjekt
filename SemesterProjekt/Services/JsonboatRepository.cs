@@ -93,7 +93,9 @@ namespace SemesterProjekt.Services
             return new Boat();
         }
 
-
-
+        public List<Boat> getallBoats(List<int> ids)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

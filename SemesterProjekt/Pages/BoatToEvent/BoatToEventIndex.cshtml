@@ -22,7 +22,7 @@
     </thead>
     <tbody>
 
-        @foreach (var item in boatrepo.getallBoats(Model.BoatIDs))
+        @foreach (var item in boatrepo.Boatlist(Model.BoatIDs))
         {
             <tr>
                 <td>@item.Id</td>
