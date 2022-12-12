@@ -50,5 +50,14 @@ namespace SemesterProjekt.Helpers
             }
         }
 
+        public static List<ClubmemberToEvent> ReadJsonClubmemberToEvent(string jsonFileName)
+        {
+            using (var jsonFileReader = File.OpenText(jsonFileName))
+            {
+                string indata = jsonFileReader.ReadToEnd();
+                return JsonSerializer.Deserialize<List<ClubmemberToEvent>>(indata);
+            }
+        }
+
     }
 }

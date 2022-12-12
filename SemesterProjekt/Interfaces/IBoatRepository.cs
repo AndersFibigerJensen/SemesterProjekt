@@ -16,6 +16,9 @@ namespace SemesterProjekt.Interfaces
 
         List<Boat> FilterBoats(string filter);
 
+        List<Boat> getallBoats(List<int> ids);
+        
+
 
     }
 }

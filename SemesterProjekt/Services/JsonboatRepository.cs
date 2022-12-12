@@ -73,6 +73,17 @@ namespace SemesterProjekt.Services
             return JsonFileReader.ReadJsonBoat(filepath);
         }
 
+        public List<Boat> Boatlist(List<int> ids)
+        {
+            List<Boat> boats = new List<Boat>();    
+            foreach(int item in ids)
+            {
+                GetBoat(item);
+                boats.Add(GetBoat(item));
+            }
+            return boats;
+        }
+
         public Boat GetBoat(int id)
         {
             List<Boat> boats=GetAllBoats();
@@ -81,6 +92,8 @@ namespace SemesterProjekt.Services
                     return item;
             return new Boat();
         }
+
+
 
     }
 }

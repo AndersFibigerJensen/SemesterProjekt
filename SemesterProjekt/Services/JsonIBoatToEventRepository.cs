@@ -9,10 +9,10 @@ namespace SemesterProjekt.Services
     {
         string filepath= @"Data\JsonEventBoat.json";
 
-        public void AddEventToBoat(int BoatId)
+        public void AddEventToBoat(BoatToEvent be)
         {
             List<BoatToEvent> EventstoBoat = GetAllBoatsToEvent();
-            //EventstoBoat.Add()
+            EventstoBoat.Add(be);
             JsonFileWriter.WritetoJsonBoatToEvent(EventstoBoat, filepath);
         }
 
@@ -38,6 +38,20 @@ namespace SemesterProjekt.Services
         public List<BoatToEvent> GetAllBoatsToEvent()
         {
             return JsonFileReader.ReadJsonBoatToEvent(filepath);
+        }
+
+        public List<int> GetAllBoatsToEventIds(int id)
+        {
+            List<BoatToEvent> boatToEvent = GetAllBoatsToEvent();
+            List<int> boatToEventIds = new List<int>();
+            foreach(BoatToEvent item in boatToEvent)
+            {
+                if(item.EventID==id)
+                {
+                    boatToEventIds.Add(item.BoatId);
+                }
+            }
+            return boatToEventIds;
         }
 
         public BoatToEvent GetBoatToEvent(int BookingID)

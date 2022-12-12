@@ -7,8 +7,11 @@ namespace SemesterProjekt.Interfaces
 
         List<BoatToEvent> GetAllBoatsToEvent();
         BoatToEvent GetBoatToEvent(int BookingID);
-        void AddEventToBoat( int BookingID);
+        void AddEventToBoat(BoatToEvent be);
         void RemoveEventToBoat(int BookingID);
         void EditEventTOBoat(BoatToEvent be);
+
+        List<int> GetAllBoatsToEventIds(int boatid);
+
     }
 }

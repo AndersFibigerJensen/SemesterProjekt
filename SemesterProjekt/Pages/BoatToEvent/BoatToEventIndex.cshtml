@@ -1,5 +1,39 @@
 ﻿@page
 @model SemesterProjekt.Pages.BoatToEvent.BoatToEventIndexModel
+@using SemesterProjekt.Interfaces;
+@using SemesterProjekt.Model;
+@inject IBoatRepository boatrepo;
 @{
     ViewData["title"] = "Boatlist";
 }
+<h1> list of boats</h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Length</th>
+            <th>width</th>
+            <th>weight</th>
+            <th>Minimumcrew</th>
+            <th>boattype</th>
+        </tr>
+    </thead>
+    <tbody>
+
+        @foreach (var item in boatrepo.getallBoats(Model.BoatIDs))
+        {
+            <tr>
+                <td>@item.Id</td>
+                <td>@item.Name</td>
+                <td>@item.Length</td>
+                <td>@item.Width</td>
+                <td>@item.Weight</td>
+                <td>@item.MinimumCrew</td>
+                <td>@item.BoatType</td>
+            </tr>
+        }
+
+    </tbody>
+</table>
