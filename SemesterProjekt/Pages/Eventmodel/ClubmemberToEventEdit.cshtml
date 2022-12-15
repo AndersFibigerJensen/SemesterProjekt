@@ -1,4 +1,24 @@
 ﻿@page
 @model SemesterProjekt.Pages.Eventmodel.ClubmemberToEventEditModel
 @{
+    ViewData["title"] = "edit a clubmember to event";
 }
+
+
+<form method="post">
+    <div class="form-group">
+        <label asp-for="@Model.ClubmemberToEvent.BookingID"></label>
+        <input asp-for="@Model.ClubmemberToEvent.BookingID" />
+    </div>
+    <div class="form-group">
+        <label asp-for="@Model.ClubmemberToEvent.ClubMemberID"></label>
+        <input asp-for="@Model.ClubmemberToEvent.ClubMemberID" />
+    </div>
+    <div class="form-group">
+        <label asp-for="@Model.ClubmemberToEvent.EventID"></label>
+        <input asp-for="@Model.ClubmemberToEvent.EventID" />
+    </div>
+    <div class="formgroup">
+        <input type="submit" value="Create" class="btn btn-primary" />
+    </div>
+</form>

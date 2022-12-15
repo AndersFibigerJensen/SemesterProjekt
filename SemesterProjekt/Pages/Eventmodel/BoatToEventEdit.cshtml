@@ -1,0 +1,23 @@
+﻿@page
+@model SemesterProjekt.Pages.Eventmodel.BoatToEventEditModel
+@{
+    ViewData["title"] = "edit a boat to event";
+}
+
+<form method="post">
+    <div class="form-group">
+        <label asp-for="@Model.BoatToEvent.BookingID"></label>
+        <input asp-for="@Model.BoatToEvent.BookingID" />
+    </div>
+    <div class="form-group">
+        <label asp-for="@Model.BoatToEvent.BoatId"></label>
+        <input asp-for="@Model.BoatToEvent.BoatId" />
+    </div>
+    <div class="form-group">
+        <label asp-for="@Model.BoatToEvent.EventID"></label>
+        <input asp-for="@Model.BoatToEvent.EventID" />
+    </div>
+    <div class="formgroup">
+        <input type="submit" value="Create" class="btn btn-primary" />
+    </div>
+</form>
