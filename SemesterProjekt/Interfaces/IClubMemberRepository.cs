@@ -10,5 +10,6 @@ namespace SemesterProjekt.Interfaces
         void EditClubMember(ClubMember clubMember);
         void DeleteClubMember(int id);
         List<ClubMember> SearchForClubMember(string search);
+        List<ClubMember> ClubmemberList(List<int> ids);
     }
 }

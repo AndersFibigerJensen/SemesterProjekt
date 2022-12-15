@@ -13,5 +13,7 @@ namespace SemesterProjekt.Interfaces
         void EditClubmemberToEvent(ClubmemberToEvent ce);
 
         void DeleteClubmemberToEvent(int id);
+
+        List<int> ClubmemberList(int eventid);
     }
 }

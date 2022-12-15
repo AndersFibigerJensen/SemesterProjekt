@@ -1,12 +1,13 @@
 ﻿@page
-@model SemesterProjekt.Pages.BoatToEvent.BoatToEventIndexModel
+@model SemesterProjekt.Pages.Eventmodel.BoatToEventModel
 @using SemesterProjekt.Interfaces;
 @using SemesterProjekt.Model;
 @inject IBoatRepository boatrepo;
 @{
-    ViewData["title"] = "Boatlist";
+    ViewData["title"] = "BoatToEventIndex";
 }
 <h1> list of boats</h1>
+<a asp-page="BoatToEventAdd"> join a new boat to event</a>
 
 <table class="table">
     <thead>

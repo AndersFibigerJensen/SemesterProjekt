@@ -54,5 +54,19 @@ namespace SemesterProjekt.Services
                     return item;
             return new ClubmemberToEvent();
         }
+
+        public List<int> ClubmemberList( int EventId)
+        {
+            List<ClubmemberToEvent> clubmembers = GetAllClubmemberToEvent();
+            List<int> ClubmembersID = new List<int>();
+            foreach (ClubmemberToEvent item in clubmembers)
+            {
+                if (item.EventID == EventId)
+                {
+                    ClubmembersID.Add(item.ClubMemberID);
+                }
+            }
+            return ClubmembersID;
+        }
     }
 }

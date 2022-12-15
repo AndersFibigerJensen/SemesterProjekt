@@ -12,6 +12,7 @@ builder.Services.AddTransient<IRentalSchedule, JsonIRentalSchedule>();
 builder.Services.AddTransient<IEventRepository, JsonEventRepository>();
 builder.Services.AddTransient<IBlogRepository, JsonBlogRepository>();
 builder.Services.AddTransient<IClubmemberEvent,JsonClubmemberToEvent>();
+builder.Services.AddTransient<IEventBoatRepository, JsonIBoatToEventRepository>();
 builder.Services.AddSingleton<LoginService>();
 
 var app = builder.Build();

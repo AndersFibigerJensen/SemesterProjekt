@@ -1,0 +1,31 @@
+﻿@page
+@model SemesterProjekt.Pages.Eventmodel.ClubmemberToEventModel
+@using SemesterProjekt.Interfaces;
+@using SemesterProjekt.Model;
+@inject IClubMemberRepository clubrepo;
+@{
+    ViewData["title"] = "clubmember to Event index";
+}
+<h1> clubmember to event</h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Age</th>
+        </tr>
+    </thead>
+    <tbody>
+
+        @foreach (ClubMember item in clubrepo.ClubmemberList(Model.ClubmemberToEvent));
+        {
+            <tr>
+                <td>item</td>
+                <td>item</td>
+                <td>item</td>
+            </tr>
+        }
+
+    </tbody>
+</table>

@@ -1,9 +1,9 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 
-namespace SemesterProjekt.Pages.BoatToEvent
+namespace SemesterProjekt.Pages.Eventmodel
 {
-    public class BoatToEventAddModel : PageModel
+    public class ClubmemberToEventEditModel : PageModel
     {
         public void OnGet()
         {

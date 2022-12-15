@@ -40,13 +40,13 @@ namespace SemesterProjekt.Services
             return JsonFileReader.ReadJsonBoatToEvent(filepath);
         }
 
-        public List<int> GetAllBoatsToEventIds(int id)
+        public List<int> GetAllBoatsToEventIds(int eventid)
         {
             List<BoatToEvent> boatToEvent = GetAllBoatsToEvent();
             List<int> boatToEventIds = new List<int>();
             foreach(BoatToEvent item in boatToEvent)
             {
-                if(item.EventID==id)
+                if(item.EventID==eventid)
                 {
                     boatToEventIds.Add(item.BoatId);
                 }

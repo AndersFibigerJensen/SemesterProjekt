@@ -67,5 +67,18 @@ namespace SemesterProjekt.Services
             }
             return searchResult;
         }
+
+        public List<ClubMember> ClubmemberList(List<int> ids)
+        {
+            List<ClubMember> members = new List<ClubMember>();
+            foreach (int item in ids)
+            {
+                ClubMember clubMember=GetClubMember(item);
+                members.Add((clubMember));
+            }
+            return members;
+        }
+
+
     }
 }

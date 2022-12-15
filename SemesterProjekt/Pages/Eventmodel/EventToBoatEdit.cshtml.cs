@@ -3,18 +3,18 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 using SemesterProjekt.Interfaces;
 using SemesterProjekt.Model;
 
-namespace SemesterProjekt.Pages.BoatToEvent
+namespace SemesterProjekt.Pages.Eventmodel
 {
-    public class BoatToEventIndexModel : PageModel
+    public class EventToBoatEditModel : PageModel
     {
         private IEventRepository eventRepository;
         private IBoatRepository boatRepository;
         private IEventBoatRepository eventBoatRepository;
 
         [BindProperty]
-        public List<int> BoatIDs { get; set; }
+        public BoatToEvent BoatToEvent { get; set; }
 
-        public BoatToEventIndexModel(IEventRepository eventRepo,IBoatRepository boatRepo, IEventBoatRepository eventBoatRepo)
+        public EventToBoatEditModel(IEventRepository eventRepo, IBoatRepository boatRepo, IEventBoatRepository eventBoatRepo)
         {
             eventRepository = eventRepo;
             boatRepository = boatRepo;
@@ -24,8 +24,13 @@ namespace SemesterProjekt.Pages.BoatToEvent
 
         public void OnGet(int id)
         {
-             BoatIDs = eventBoatRepository.GetAllBoatsToEventIds(id);
+            BoatToEvent=eventBoatRepository.GetBoatToEvent(id);
+        }
 
+        public IActionResult Onpost()
+        {
+            eventBoatRepository.EditEventTOBoat(BoatToEvent);
+            return RedirectToAction("BoatToEvent");
         }
     }
 }
