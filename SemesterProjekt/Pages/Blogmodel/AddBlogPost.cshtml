@@ -6,7 +6,7 @@
 <h1>Make a new post on the blog</h1>
 <div class="row">
 	<div class="col-4-md">
-		<form method="post">
+		<form method="post" enctype="multipart/form-data">
 			<div class="form-group">
 				<label asp-for="@Model.Post.PostId" class="control-label"></label>
 				<input asp-for="@Model.Post.PostId" class="control-label" />
@@ -18,6 +18,13 @@
 			<div class="form-group">
 				<label asp-for="@Model.Post.Text" class="control-label"></label>
 				<input asp-for="@Model.Post.Text" class="control-label" />
+			</div>
+			<div class="form-group">
+				<label asp-for="@Model.Photo" class="control-label"></label>
+				<div class="custom-file">
+					<input asp-for="@Model.Photo" class="custom-file-input form-control" />
+                    <label class="custom-file-label">Gem Billede</label>
+				</div>
 			</div>
 			<div class="form-group">
 				<input type="submit" value="make post" class= btn btn.primary />
