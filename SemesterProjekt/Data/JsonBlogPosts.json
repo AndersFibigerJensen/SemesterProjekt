@@ -1,12 +1,14 @@
 [
-  {
-    "PostId": 1,
-    "Title": "Hello World",
-    "Text": "We all say hello to this world with our first blog post"
-  },
-  {
-    "PostId": 2,
-    "Title": "Hello again World",
-    "Text": "We all say hello to this world with our second blog post"
-  }
+    {
+        "PostId": 1,
+        "Title": "Hello World",
+        "Text": "We all say hello to this world with our first blog post",
+        "PostImage": "Båd_1.jpg"
+    },
+    {
+        "PostId": 2,
+        "Title": "Hello again World",
+        "Text": "We all say hello to this world with our second blog post",
+        "PostImage": "Båd_2.jpg"
+    }
 ]

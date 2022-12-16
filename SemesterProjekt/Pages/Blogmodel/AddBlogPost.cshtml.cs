@@ -7,12 +7,18 @@ namespace SemesterProjekt.Pages.Blogmodel
 {
     public class AddBlogPostModel : PageModel
     {
+        private IWebHostEnvironment webHostEnvironment;
         private IBlogRepository blogRepository;
+
+        [BindProperty]
+        public IFormFile Photo { get; set; }
         [BindProperty]
         public BlogPost Post { get; set; }
-        public AddBlogPostModel(IBlogRepository blogRepository)
+        public AddBlogPostModel(IBlogRepository blogrepo, IWebHostEnvironment webHost)
         {
-            this.blogRepository = blogRepository;
+            blogRepository = blogrepo;
+            webHostEnvironment = webHost;
+            
         }
 
         public IActionResult OnGet()
@@ -21,6 +27,16 @@ namespace SemesterProjekt.Pages.Blogmodel
         }
         public IActionResult OnPost()
         {
+            if (Photo != null)
+            {
+                if (BlogPost.PostImage != null)
+                {
+                    string filePath = Path.Combine(webHostEnvironment.WebRootPath, "/images/BlogImages", BlogPost.PostImage);
+                    System.IO.File.Delete(filePath);
+                }
+
+                 = ProcessUploadedFile();
+            }
             if (!ModelState.IsValid)
                 return Page();
             blogRepository.AddBlogPost(Post);
