@@ -2,9 +2,18 @@
 @model SemesterProjekt.Pages.Eventmodel.BoatToeventDeleteModel
 @using SemesterProjekt.Interfaces;
 @using SemesterProjekt.Model;
-@inject IClubMemberRepository clubrepo;
+@inject IBoatRepository boatrepo;
+@inject IEventRepository eventrepo;
 @{
     ViewData["title"] = "Delete Event to boat";
 }
 
 <h1> Delete event to boat</h1>
+<h2>you sure you want to delete @boatrepo.GetBoat(Model.BoatToEvent.BoatId).Name
+    from @eventrepo.GetEvent(Model.BoatToEvent.EventID).Name </h2>
+
+<form method="post">
+    <input asp-for="@Model.BoatToEvent.BookingID" type="hidden" />
+    <input type="submit" value="Delete" />
+    <a asp-page="BoatToEvent" class="btn btn-primary">Cancel</a>
+</form>

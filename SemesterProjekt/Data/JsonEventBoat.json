@@ -1,7 +1,17 @@
 [
   {
     "BoatId": 1,
-    "EventID": 2,
+    "EventID": 3,
+    "BookingID": 1
+  },
+  {
+    "BoatId": 1,
+    "EventID": 3,
+    "BookingID": 1
+  },
+  {
+    "BoatId": 1,
+    "EventID": 3,
     "BookingID": 1
   }
 ]
