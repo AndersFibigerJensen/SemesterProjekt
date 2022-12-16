@@ -12,6 +12,21 @@ namespace SemesterProjekt.Services
         public void AddBoat(Boat bo)
         {
             List<Boat> boats = GetAllBoats();
+            List<int> BoatIds = new List<int>();
+
+            foreach (var boat in boats)
+            {
+                BoatIds.Add(boat.Id);
+            }
+            if (BoatIds.Count != 0)
+            {
+                int start = BoatIds.Max();
+                bo.Id = start + 1;
+            }
+            else
+            {
+                bo.Id = 1;
+            }
             boats.Add(bo);
             JsonFileWriter.WritetoJsonBoat(boats,filepath);
         }

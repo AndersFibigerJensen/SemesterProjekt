@@ -11,6 +11,21 @@ namespace SemesterProjekt.Services
         public void AddClubmemberToEvent(ClubmemberToEvent ce)
         {
             List<ClubmemberToEvent> clubMembers = GetAllClubmemberToEvent();
+            List<int> clubmembersID = new List<int>();
+
+            foreach (ClubmemberToEvent member in clubMembers)
+            {
+                clubmembersID.Add(member.BookingID);
+            }
+            if (clubmembersID.Count != 0)
+            {
+                int start = clubmembersID.Max();
+                ce.BookingID = start + 1;
+            }
+            else
+            {
+                ce.BookingID = 1;
+            }
             clubMembers.Add(ce);
             JsonFileWriter.WritetoJsonClubmemberToEvent(clubMembers, filepath);
         }

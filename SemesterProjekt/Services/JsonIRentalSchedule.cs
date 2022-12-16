@@ -1,4 +1,5 @@
-﻿using SemesterProjekt.Helpers;
+﻿using Microsoft.Extensions.Logging;
+using SemesterProjekt.Helpers;
 using SemesterProjekt.Interfaces;
 using SemesterProjekt.Model;
 using System.Runtime.CompilerServices;
@@ -13,6 +14,21 @@ namespace SemesterProjekt.Services
         public void AddRentalPeriod(RentalPeriod re)
         {
             List<RentalPeriod> periods = GetAllRentalPeriods();
+            List<int> RentalID = new List<int>();
+
+            foreach (RentalPeriod ren in periods)
+            {
+                RentalID.Add(ren.Id);
+            }
+            if (RentalID.Count != 0)
+            {
+                int start = RentalID.Max();
+                re.Id = start + 1;
+            }
+            else
+            {
+                re.Id = 1;
+            }
             periods.Add(re);
             JsonFileWriter.WritetoJsonRentalPeriod(periods,filepath);
         }

@@ -10,6 +10,21 @@ namespace SemesterProjekt.Services
         public void AddBlogPost(BlogPost post)
         {
             List<BlogPost> posts = GetAllPosts();
+            List<int> PostIds = new List<int>();
+
+            foreach (BlogPost po in posts)
+            {
+                PostIds.Add(po.PostId);
+            }
+            if (PostIds.Count != 0)
+            {
+                int start = PostIds.Max();
+                post.PostId = start + 1;
+            }
+            else
+            {
+                post.PostId = 1;
+            }
             posts.Add(post);
             JsonFileWriter.WritetoJsonBlogPosts(posts, filepath);
         }

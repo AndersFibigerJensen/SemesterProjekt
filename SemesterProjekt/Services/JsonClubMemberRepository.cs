@@ -9,9 +9,25 @@ namespace SemesterProjekt.Services
         string filepath = @"Data\JsonClubMembers.json";
         public void AddClubMember(ClubMember clubMember)
         {
-            List<ClubMember> clubMembers = GetAllClubMembers();
-            clubMembers.Add(clubMember);
-            JsonFileWriter.WritetoJsonClubMembers(clubMembers,filepath);
+            List<ClubMember> members = GetAllClubMembers();
+            List<int> clubmembersID = new List<int>();
+
+            foreach (ClubMember member in members)
+            {
+                clubmembersID.Add(member.Id);
+            }
+            if (clubmembersID.Count != 0)
+            {
+                int start = clubmembersID.Max();
+                clubMember.Id = start + 1;
+            }
+            else
+            {
+                clubMember.Id = 1;
+            }
+            members.Add(clubMember);
+
+            JsonFileWriter.WritetoJsonClubMembers(members,filepath);
         }
         
         public void DeleteClubMember(int id)

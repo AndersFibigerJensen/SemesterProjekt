@@ -12,6 +12,21 @@ namespace SemesterProjekt.Services
         public void AddEventToBoat(BoatToEvent be)
         {
             List<BoatToEvent> EventstoBoat = GetAllBoatsToEvent();
+            List<int> EventID = new List<int>();
+
+            foreach (BoatToEvent bo in EventstoBoat)
+            {
+                EventID.Add(bo.BookingID);
+            }
+            if (EventID.Count != 0)
+            {
+                int start = EventID.Max();
+                be.BookingID = start + 1;
+            }
+            else
+            {
+                be.BookingID = 1;
+            }
             EventstoBoat.Add(be);
             JsonFileWriter.WritetoJsonBoatToEvent(EventstoBoat, filepath);
         }

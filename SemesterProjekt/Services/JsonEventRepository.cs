@@ -12,6 +12,21 @@ namespace SemesterProjekt.Services
         public void AddEvent(Event e)
         {
             List<Event> events = GetAllEvents();
+            List<int> EventID = new List<int>();
+
+            foreach (Event ev in events)
+            {
+                EventID.Add(ev.Id);
+            }
+            if (EventID.Count != 0)
+            {
+                int start = EventID.Max();
+                e.Id = start + 1;
+            }
+            else
+            {
+                e.Id = 1;
+            }
             events.Add(e);
             JsonFileWriter.WritetoJsonEvent(events, filepath);
         }
