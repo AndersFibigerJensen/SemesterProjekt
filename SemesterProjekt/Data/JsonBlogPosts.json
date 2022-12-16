@@ -1,14 +1,26 @@
 [
-    {
-        "PostId": 1,
-        "Title": "Hello World",
-        "Text": "We all say hello to this world with our first blog post",
-        "PostImage": "Båd_1.jpg"
-    },
-    {
-        "PostId": 2,
-        "Title": "Hello again World",
-        "Text": "We all say hello to this world with our second blog post",
-        "PostImage": "Båd_2.jpg"
-    }
+  {
+    "PostId": 1,
+    "Title": "Hello World",
+    "Text": "We all say hello to this world with our first blog post",
+    "PostImage": "B\u00E5d_1.jpg"
+  },
+  {
+    "PostId": 2,
+    "Title": "Hello again World",
+    "Text": "We all say hello to this world with our second blog post",
+    "PostImage": "B\u00E5d_2.jpg"
+  },
+  {
+    "PostId": 3,
+    "Title": "potat",
+    "Text": "potatoes",
+    "PostImage": null
+  },
+  {
+    "PostId": 656,
+    "Title": "potat",
+    "Text": "buddychumpalcummypalcum",
+    "PostImage": "e556b105-5b26-4980-8be6-bfb3c8d17a1f_6426519_rd.jpg"
+  }
 ]

@@ -29,18 +29,31 @@ namespace SemesterProjekt.Pages.Blogmodel
         {
             if (Photo != null)
             {
-                if (BlogPost.PostImage != null)
+                if (Post.PostImage != null)
                 {
-                    string filePath = Path.Combine(webHostEnvironment.WebRootPath, "/images/BlogImages", BlogPost.PostImage);
+                    string filePath = Path.Combine(webHostEnvironment.WebRootPath, "/images/BlogImages", Post.PostImage);
                     System.IO.File.Delete(filePath);
                 }
 
-                 = ProcessUploadedFile();
+                Post.PostImage = ProcessUploadedFile();
             }
-            if (!ModelState.IsValid)
-                return Page();
             blogRepository.AddBlogPost(Post);
             return RedirectToPage("IndexBlog");
+        }
+        private string ProcessUploadedFile()
+        {
+            string uniqueFileName = null;
+            if (Photo != null)
+            {
+                string uploadsFolder = Path.Combine(webHostEnvironment.WebRootPath, "images/BlogImages");
+                uniqueFileName = Guid.NewGuid().ToString() + "_" + Photo.FileName;
+                string filePath = Path.Combine(uploadsFolder, uniqueFileName);
+                using (var fileStream = new FileStream(filePath, FileMode.Create))
+                {
+                    Photo.CopyTo(fileStream);
+                }
+            }
+            return uniqueFileName;
         }
     }
 }

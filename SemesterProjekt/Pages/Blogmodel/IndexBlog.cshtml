@@ -26,6 +26,9 @@
 		@foreach(var item in Model.Posts)
 		{
 			<tr>
+				<td>
+					<img src="~/Images/BlogImages/@item.PostImage" class="rounded-circle" width="80" height="70">
+				</td>
 				<td>@item.PostId</td>
 				<td>@item.Title</td>
 				<td>@item.Text</td>
