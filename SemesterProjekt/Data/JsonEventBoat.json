@@ -1,10 +1,7 @@
 [
   {
-
     "BoatId": 1,
-    "EventID": 1,
+    "EventID": 2,
     "BookingID": 1
   }
-
-
-] 
+]

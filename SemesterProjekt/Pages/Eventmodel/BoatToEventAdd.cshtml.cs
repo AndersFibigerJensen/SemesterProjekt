@@ -8,9 +8,9 @@ namespace SemesterProjekt.Pages.Eventmodel
 {
     public class BoatToEventAddModel : PageModel
     {
-        private IEventRepository eventRepository;
-        private IBoatRepository boatRepository;
-        private IEventBoatRepository eventBoatRepository;
+        private IEventRepository _eventRepository;
+        private IBoatRepository _boatRepository;
+        private IEventBoatRepository _eventBoatRepository;
 
         public SelectList BoatNames { get; set; }
 
@@ -21,9 +21,13 @@ namespace SemesterProjekt.Pages.Eventmodel
 
         public BoatToEventAddModel(IEventBoatRepository eventboatrepo,IBoatRepository boatrepo,IEventRepository eventrepo)
         {
-            eventRepository=eventrepo;
-            boatRepository = boatrepo;
-            eventBoatRepository = eventboatrepo;
+            _eventRepository=eventrepo;
+            _boatRepository = boatrepo;
+            _eventBoatRepository = eventboatrepo;
+            List<Boat> boatlist = _boatRepository.GetAllBoats();
+            List<Event> events = _eventRepository.GetAllEvents();
+            BoatNames = new SelectList(boatlist, "Id", "Name");
+            EventNames = new SelectList(events, "Id", "Name");
         }
 
         public void OnGet()
@@ -33,7 +37,7 @@ namespace SemesterProjekt.Pages.Eventmodel
 
         public IActionResult Onpost()
         {
-            eventBoatRepository.AddEventToBoat(BoatToevent);
+            _eventBoatRepository.AddEventToBoat(BoatToevent);
             return Page();
         }
     }

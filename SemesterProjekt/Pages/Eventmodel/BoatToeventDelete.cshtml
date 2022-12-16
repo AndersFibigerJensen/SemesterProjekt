@@ -1,4 +1,10 @@
 ﻿@page
 @model SemesterProjekt.Pages.Eventmodel.BoatToeventDeleteModel
+@using SemesterProjekt.Interfaces;
+@using SemesterProjekt.Model;
+@inject IClubMemberRepository clubrepo;
 @{
+    ViewData["title"] = "Delete Event to boat";
 }
+
+<h1> Delete event to boat</h1>

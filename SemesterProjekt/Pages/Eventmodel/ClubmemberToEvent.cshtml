@@ -3,6 +3,7 @@
 @using SemesterProjekt.Interfaces;
 @using SemesterProjekt.Model;
 @inject IClubMemberRepository clubrepo;
+@inject IEventRepository eventrepo;
 @{
     ViewData["title"] = "clubmember to Event index";
 }
@@ -18,12 +19,13 @@
     </thead>
     <tbody>
 
-        @foreach (ClubMember item in clubrepo.ClubmemberList(Model.ClubmemberToEvent));
+        @foreach (ClubMember item in clubrepo.ClubmemberList(Model.ClubmemberToEvent))
         {
             <tr>
-                <td>item</td>
-                <td>item</td>
-                <td>item</td>
+                <td>@item.Id</td>
+                <td>@item.Name</td>
+                <td>@item.Age</td>
+                <td> <a asp-page="ClubmemberToEventEdit" asp-route-id="@item.Id">boats to event </a> | <a asp-page="ClubmemberToEventDelete" asp-route-id="@item.Id">boats to event </a> </td>
             </tr>
         }
 

@@ -1,6 +1,7 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using SemesterProjekt.Interfaces;
+using SemesterProjekt.Model;
 
 namespace SemesterProjekt.Pages.Eventmodel
 {
@@ -9,7 +10,10 @@ namespace SemesterProjekt.Pages.Eventmodel
         private IEventRepository eventRepository;
         private IBoatRepository boatRepository;
         private IEventBoatRepository eventBoatRepository;
+
         
+        public Event Event { get; set; }
+
         [BindProperty]
         public List<int> BoatIDs { get; set; }
 
@@ -23,6 +27,7 @@ namespace SemesterProjekt.Pages.Eventmodel
 
         public void OnGet(int id)
         {
+            Event= eventRepository.GetEvent(id);
             BoatIDs = eventBoatRepository.GetAllBoatsToEventIds(id);
 
         }

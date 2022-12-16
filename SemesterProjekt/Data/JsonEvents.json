@@ -22,5 +22,13 @@
     "FromDate": "2022-12-02T11:13:00",
     "ToDate": "2022-12-17T11:13:00",
     "joinedBoats": []
+  },
+  {
+    "Id": 3,
+    "Name": "poul",
+    "Description": "test",
+    "FromDate": "2022-12-24T12:55:00",
+    "ToDate": "2022-12-24T12:55:00",
+    "joinedBoats": null
   }
 ]

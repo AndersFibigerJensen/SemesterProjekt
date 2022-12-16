@@ -1,9 +1,14 @@
 ﻿@page
 @model SemesterProjekt.Pages.Eventmodel.BoatToEventAddModel
+@using SemesterProjekt.Interfaces;
+@using SemesterProjekt.Model;
+@inject IEventRepository eventrepo;
+@inject IBoatRepository boatrepo;
 @{
     ViewData["title"] = "add Boat to Event";
 }
 <h1> add boat to event</h1>
+
 
 
 <form method="post">
@@ -12,12 +17,14 @@
         <input asp-for="@Model.BoatToevent.BookingID" />
     </div>
     <div class="form-group">
-        <label asp-for="@Model.BoatToevent.BoatId"></label>
-        <input asp-for="@Model.BoatToevent.BoatId" />
+        <select asp-for="@Model.BoatToevent.EventID" class="form-control" asp-items="@Model.EventNames">
+            <option value="">-- Select event---</option>
+        </select>
     </div>
     <div class="form-group">
-        <label asp-for="@Model.BoatToevent.EventID"></label>
-        <input asp-for="@Model.BoatToevent.EventID" />
+        <select asp-for="@Model.BoatToevent.BoatId" class="form-control" asp-items="@Model.BoatNames">
+            <option value="">-- Select Boat---</option>
+        </select>
     </div>
     <div class="formgroup">
         <input type="submit" value="Create" class="btn btn-primary" />

@@ -1,5 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
+using Microsoft.AspNetCore.Mvc.Rendering;
 using SemesterProjekt.Interfaces;
 using SemesterProjekt.Model;
 
@@ -13,6 +14,10 @@ namespace SemesterProjekt.Pages.Eventmodel
 
         [BindProperty]
         public ClubmemberToEvent ClubmemberToEvent { get; set; }
+
+        public SelectList ClubmemberNames { get; set; }
+
+        public SelectList EventNames { get; set; }
 
         public ClubmemberToEventDeleteModel(IEventRepository eventRepository, IClubmemberEvent clubeventrepo, IClubMemberRepository clubrepo)
         {
