@@ -1,19 +1,28 @@
 ﻿@page
 @model SemesterProjekt.Pages.RentalPeriods.RentalEditModel
+@using SemesterProjekt.Interfaces;
+@using SemesterProjekt.Model;
+@inject IEventRepository eventrepo;
+@inject IBoatRepository boatrepo;
 @{
     ViewData["title"] = "edit rental";
 }
 <div class="row">
     <div class="col-md-4">
         <form method="post">
-            <input asp-for=@Model.RentalPeriod.Id type="hidden" />
+            <input asp-for=@Model.Period.Id type="hidden" />
             <div class="form-group">
-                <label asp-for="@Model.RentalPeriod.RentalperiodFrom" class="control-label"></label>
-                <input asp-for="@Model.RentalPeriod.RentalperiodFrom" class="control-label" />
+                <label asp-for="@Model.Period.RentalperiodFrom" class="control-label"></label>
+                <input asp-for="@Model.Period.RentalperiodFrom" class="control-label" />
             </div>
             <div class="form-group">
-                <label asp-for="@Model.RentalPeriod.RentalperiodTo" class="control-label"></label>
-                <input asp-for="@Model.RentalPeriod.RentalperiodTo" class="control-label" />
+                <label asp-for="@Model.Period.RentalperiodTo" class="control-label"></label>
+                <input asp-for="@Model.Period.RentalperiodTo" class="control-label" />
+            </div>
+            <div class="form-group">
+                <select asp-for="@Model.Period.Boat" class="form-control" asp-items="@Model.Boatnames">
+                    <option value="">-- Select Boat---</option>
+                </select>
             </div>
             <div class>
                 <a asp-page="RentalIndex">Cancel</a>

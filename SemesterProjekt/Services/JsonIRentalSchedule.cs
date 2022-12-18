@@ -39,16 +39,20 @@ namespace SemesterProjekt.Services
             if(re != null)
             {
                 List<RentalPeriod> periods = GetAllRentalPeriods();
-                foreach (RentalPeriod period in periods)
+                if (re != null)
                 {
-                    if(re.Id == period.Id)
+                    foreach (RentalPeriod item in periods)
                     {
-                        period.Verification = re.Verification;
-                        period.RentalperiodTo = re.RentalperiodTo;
+                        if (item.Id==re.Id)
+                        {
+                            item.RentalperiodFrom = re.RentalperiodFrom;
+                            item.RentalperiodTo = re.RentalperiodTo;
+                            item.Boat = re.Boat;
+                        }
                     }
-
+                    JsonFileWriter.WritetoJsonRentalPeriod(periods, filepath);
                 }
-                JsonFileWriter.WritetoJsonRentalPeriod(periods, filepath);
+
             }
         }
 
