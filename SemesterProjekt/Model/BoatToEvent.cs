@@ -1,11 +1,16 @@
-﻿namespace SemesterProjekt.Model
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace SemesterProjekt.Model
 {
     public class BoatToEvent
     {
+        [Required]
         public int BoatId { get; set; }
 
+        [Required]
         public int EventID { get; set; }
 
+        [Required]
         public int BookingID { get; set; }
 
         public override bool Equals(object? obj)

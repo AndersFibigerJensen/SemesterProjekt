@@ -11,10 +11,6 @@
 
 <form method="post">
     <div class="form-group">
-        <label asp-for="@Model.ClubmemberToEvent.BookingID"></label>
-        <input asp-for="@Model.ClubmemberToEvent.BookingID" />
-    </div>
-    <div class="form-group">
         <select asp-for="@Model.ClubmemberToEvent.EventID" class="form-control" asp-items="@Model.EventNames">
             <option value="">-- Select event---</option>
         </select>

@@ -9,13 +9,9 @@
 }
 <h1> add boat to event</h1>
 
-
+<a asp-page="ClubmemberToEventAdd"> add a boat to event </a>
 
 <form method="post">
-    <div class="form-group">
-        <label asp-for="@Model.BoatToevent.BookingID"></label>
-        <input asp-for="@Model.BoatToevent.BookingID" />
-    </div>
     <div class="form-group">
         <select asp-for="@Model.BoatToevent.EventID" class="form-control" asp-items="@Model.EventNames">
             <option value="">-- Select event---</option>

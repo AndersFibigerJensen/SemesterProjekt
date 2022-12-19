@@ -16,21 +16,30 @@ namespace SemesterProjekt.Services
             List<RentalPeriod> periods = GetAllRentalPeriods();
             List<int> RentalID = new List<int>();
 
-            foreach (RentalPeriod ren in periods)
+            foreach (RentalPeriod period in periods)
             {
-                RentalID.Add(ren.Id);
+                if(re.RentalperiodFrom>=period.RentalperiodFrom && re.RentalperiodTo>= period.RentalperiodTo && re.Boat==period.Boat)
+                {
+                    foreach (RentalPeriod ren in periods)
+                    {
+                        RentalID.Add(ren.Id);
+                    }
+                    if (RentalID.Count != 0)
+                    {
+                        int start = RentalID.Max();
+                        re.Id = start + 1;
+                    }
+                    else
+                    {
+                        re.Id = 1;
+                    }
+                    periods.Add(re);
+                    JsonFileWriter.WritetoJsonRentalPeriod(periods, filepath);
+
+                }
             }
-            if (RentalID.Count != 0)
-            {
-                int start = RentalID.Max();
-                re.Id = start + 1;
-            }
-            else
-            {
-                re.Id = 1;
-            }
-            periods.Add(re);
-            JsonFileWriter.WritetoJsonRentalPeriod(periods,filepath);
+
+
         }
 
         public void EditRentalPeriod(RentalPeriod re)
