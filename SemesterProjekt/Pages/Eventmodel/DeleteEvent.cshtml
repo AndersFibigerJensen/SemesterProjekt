@@ -3,14 +3,14 @@
 @{
     ViewData["title"] = "edit an event";
 }
+<h2> vil du slette Eventet?</h2>
 <p>
-    <h2> vil du slette Event
     @Model.Event.Name
     @Model.Event.Description
-    @Model.Event.FromDate</h2>
+    @Model.Event.FromDate
 </p>
 <form method="post">
     <input asp-for="@Model.Event.Id" type="hidden" />
-    <input type="submit" value="Delete" />
-    <a asp-page="EventIndex" class="btn btn-primary">Cancel</a>
+    <input type="submit" value="Delete" class="btn btn-primary"/>
+    <a asp-page="EventIndex" class="btn cancelbutton">Cancel</a>
 </form>

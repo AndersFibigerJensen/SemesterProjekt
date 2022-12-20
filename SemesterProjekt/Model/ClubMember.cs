@@ -13,13 +13,15 @@ namespace SemesterProjekt.Model
         public string Email { get; set; }
         [Required]
         public string Password { get; set; }
-        public ClubMember(int id, string name, int age, string email, string password)
+        public string MemberImage { get; set; }
+        public ClubMember(int id, string name, int age, string email, string password, string memberImage)
         {
             Id = id;
             Name = name;
             Age = age;
             Email = email;
             Password = password;
+            MemberImage = memberImage;
         }
 
         public override bool Equals(object? obj)

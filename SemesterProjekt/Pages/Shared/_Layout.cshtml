@@ -1,4 +1,6 @@
-﻿<!DOCTYPE html>
+﻿@using SemesterProjekt.Services;
+@inject LoginService LoginService;
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8" />
@@ -7,6 +9,8 @@
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/SemesterProjekt.styles.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/pages.css" />
+    <script src="https://kit.fontawesome.com/a35649bcce.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <header>
@@ -18,33 +22,47 @@
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
-                    <ul class="navbar-nav flex-grow-1">
+                    <ul class="navbar-nav flex-grow-1" style="align-items: center;">
+                        @*
                         <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-page="/Index">Home</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-page="/Privacy">Privacy</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-page="/Clubmember/Index">Clubmembers</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-page="/Boatmodel/IndexBoat">Boats</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-page="/RentalPeriods/RentalIndex">RentalPeriods</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-page="/EventModel/EventIndex">Events</a>
-                        </li>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-page="/BlogModel/IndexBlog">Blog</a>
-                        </li>
+                        *@
+                        
                         @*sæt jeres links over det her punkt*@
-                        <li class="nav-item" style="margin-left: auto">
-                            <a class="nav-link text-dark" asp-area="" asp-page="/Login/Index">Log-in</a>
-                        </li>
+                        @if (LoginService.GetLoggedUser() == null)
+                        {
+                            <li class="nav-item" style="margin-left: auto">
+                                <a class="nav-link text-dark" asp-area="" asp-page="/Login/Index">Log-in</a>
+                            </li>
+                        }
+                        else{
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" asp-area="" asp-page="/Clubmember/Index">Clubmembers</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" asp-area="" asp-page="/Boatmodel/IndexBoat">Boats</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" asp-area="" asp-page="/RentalPeriods/RentalIndex">RentalPeriods</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" asp-area="" asp-page="/EventModel/EventIndex">Events</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" asp-area="" asp-page="/BlogModel/IndexBlog">Blog</a>
+                            </li>
+
+                            <li class="nav-item" style="margin-left: auto; display: flex;">
+                                <p class="nav-link text-dark" style="margin: 0; padding-right: 0">Hej</p>
+                                <a asp-page="Clubmember/PersonalMemberPage" asp-route-id="@LoginService.GetLoggedUser().Id" class="nav-link text-dark">@LoginService.GetLoggedUser().Name</a>
+                            </li>
+                            <li><a asp-page="/Login/Logout" asp-area="" class="nav-link text-dark">Log-out</a></li>
+                        }
+
                     </ul>
                 </div>
             </div>
@@ -58,7 +76,7 @@
 
     <footer class="border-top footer text-muted">
         <div class="container">
-            &copy; 2022 - SemesterProjekt - <a asp-area="" asp-page="/Privacy">Privacy</a>
+            &copy; 2022 - SemesterProjekt @*- <a asp-area="" asp-page="/Privacy">Privacy</a>*@
         </div>
     </footer>
 

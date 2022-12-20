@@ -28,8 +28,9 @@
                 <label asp-for="@Model.Event.ToDate" class="control-label"></label>
                 <input asp-for="@Model.Event.ToDate" class="control-label" />
             </div>
-            <div class="form-group">
+            <div>
                 <input type="submit" value="create Event" class="btn btn-primary" />
+                <a asp-page="EventIndex" class="btn cancelbutton">Cancel</a>
             </div>
         </form>
     </div>

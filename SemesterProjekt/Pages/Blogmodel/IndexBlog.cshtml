@@ -6,20 +6,23 @@
 }
 
 <h1>Blog Posts</h1>
-<a asp-page="AddBlogPost">New Blog Post</a>
+<a asp-page="AddBlogPost" class="btn btn-primary">New Blog Post</a>
 <form method="post">
 	<p>
-		Search <input type="text" asp-for="@Model.FilterCriteria" />
-		<input type="submit" value="Search" />
+		<input type="text" asp-for="@Model.FilterCriteria" class="search" />
+		<button type="submit" class="btn btn-primary"><i class="fa-solid fa-magnifying-glass"></i></button>
 	</p>
 </form>
 
 <table class="table">
 	<thead>
 		<tr>
+			<th></th>
 			<th>PostId</th>
 			<th>Title</th>
 			<th>Text</th>
+			<th></th>
+			<th></th>
 		</tr>
 	</thead>
 	<tbody>

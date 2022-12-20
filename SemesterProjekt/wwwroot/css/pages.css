@@ -1,0 +1,54 @@
+﻿body {
+}
+
+h1{
+    margin-bottom: 16px;
+}
+
+form{
+    width: max-content;
+}
+
+input[type="text"], input[type="number"], input[type="file"], input[type="password"] {
+    border-radius: 0.25rem;
+    padding: 6px 12px;
+    border: 1px solid #C2C2C2;
+}
+
+.search {
+    margin-top: 16px;
+}
+
+table{
+    margin-top: 8px;
+    text-align: center;
+}
+
+table img{
+    max-height: 70px;
+    max-width: auto;
+}
+
+table td{
+    vertical-align: middle;
+}
+
+.form-group {
+    margin-bottom: 16px;
+    display: flex;
+    flex-direction: column;
+}
+
+.cancelbutton {
+    margin-left: 8px;
+    color: #0d6efd;
+    background-color: #fff;
+    border-color: #0d6efd;
+}
+
+.userpage-form{
+    margin-top: 40px;
+    display: flex;
+    width: auto;
+    justify-content: space-evenly;
+}

@@ -7,6 +7,7 @@
 @{
     ViewData["title"] = "edit rental";
 }
+
 <div class="row">
     <div class="col-md-4">
         <form method="post">
@@ -25,8 +26,8 @@
                 </select>
             </div>
             <div class>
-                <a asp-page="RentalIndex">Cancel</a>
-                <input type="submit" value="edit" class=" btn btn-primary" />
+                <input type="submit" value="Edit" class=" btn btn-primary" />
+                <a asp-page="RentalIndex" class="btn cancelbutton">Cancel</a>
             </div>
         </form>
     </div>

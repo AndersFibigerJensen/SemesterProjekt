@@ -7,7 +7,7 @@
     ViewData["title"] = "BoatToEventIndex";
 }
 <h1> list of boats</h1>
-<a asp-page="BoatToEventAdd"  asp-route-id="@Model.Event.Id"> join a new boat to event</a>
+<a asp-page="BoatToEventAdd" asp-route-id="@Model.Event.Id" class="btn btn-primary"> join a new boat to event</a>
 
 <table class="table">
     <thead>
@@ -19,6 +19,7 @@
             <th>weight</th>
             <th>Minimumcrew</th>
             <th>boattype</th>
+            <th></th>
         </tr>
     </thead>
     <tbody>
