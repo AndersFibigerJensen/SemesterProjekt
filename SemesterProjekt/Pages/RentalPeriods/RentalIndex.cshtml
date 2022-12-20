@@ -1,5 +1,8 @@
 ﻿@page
 @model SemesterProjekt.Pages.RentalPeriods.RentalIndexModel
+@using SemesterProjekt.Interfaces
+@using SemesterProjekt.Model
+@inject IBoatRepository boatrepo;
 @{
     ViewData["title"] = "RentalIndex";
 }
@@ -24,7 +27,7 @@
                 <td>@item.Id</td>
                 <td>@item.RentalperiodFrom</td>
                 <td>@item.RentalperiodTo</td>
-@*                <td>@item.Boat.Name</td>*@
+                <td>@boatrepo.GetBoat(item.Boatid).Name</td>
                 <td><a asp-page="RentalEdit" asp-route-id="@item.Id">Edit</a></td>
                 <td><a asp-page="RentalDelete" asp-route-id="@item.Id">Delete</a></td>
             </tr>

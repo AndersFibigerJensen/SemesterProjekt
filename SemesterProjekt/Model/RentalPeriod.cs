@@ -18,7 +18,7 @@ namespace SemesterProjekt.Model
         [Range(typeof(DateTime), "18/11/2022", "18/11/2023", ErrorMessage = "Datoen er uden for intervallet")]
         public DateTime RentalperiodTo { get; set; }
 
-        public Boat Boat { get; set; }
+        public int Boatid { get; set; }
 
         public bool Verification { get; set; }
 

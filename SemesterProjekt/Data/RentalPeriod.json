@@ -3,7 +3,7 @@
     "Id": 1,
     "RentalperiodFrom": "2022-12-08T09:50:00",
     "RentalperiodTo": "2022-12-31T09:50:00",
-    "Boat": null,
+    "Boatid": 3,
     "Verification": false,
     "CrewMember": null
   },
@@ -11,7 +11,7 @@
     "Id": 2,
     "RentalperiodFrom": "2022-12-17T09:50:00",
     "RentalperiodTo": "2022-12-30T09:50:00",
-    "Boat": null,
+    "Boatid": 1,
     "Verification": false,
     "CrewMember": null
   },
@@ -19,7 +19,7 @@
     "Id": 3,
     "RentalperiodFrom": "2022-12-30T16:49:00",
     "RentalperiodTo": "2022-12-31T16:49:00",
-    "Boat": null,
+    "Boatid": 1,
     "Verification": false,
     "CrewMember": null
   },
@@ -27,7 +27,7 @@
     "Id": 4,
     "RentalperiodFrom": "2022-12-24T17:01:00",
     "RentalperiodTo": "2022-12-14T17:01:00",
-    "Boat": null,
+    "Boatid": 1,
     "Verification": false,
     "CrewMember": null
   }
