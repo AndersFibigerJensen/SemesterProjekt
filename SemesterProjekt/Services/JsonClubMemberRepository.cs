@@ -50,6 +50,8 @@ namespace SemesterProjekt.Services
                     {
                         member.Name = clubMember.Name;
                         member.Age = clubMember.Age;
+                        member.Email = clubMember.Email;
+                        member.Password = clubMember.Password;
                     }
                 }
                 JsonFileWriter.WritetoJsonClubMembers(clubMembers, filepath);

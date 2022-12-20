@@ -1,0 +1,38 @@
+﻿@page
+@model SemesterProjekt.Pages.Clubmember.PersonalMemberPageModel
+@using SemesterProjekt.Interfaces;
+@inject IClubMemberRepository repository;
+@{
+}
+
+<div>
+        <form method="post" class="userpage-form">
+            <input asp-for=@Model.ClubMember.Id type="hidden" />
+            <div>
+                <img src="~/Images/ClubmemberImages/@Model.ClubMember.MemberImage" class="rounded-circle" />
+            </div>
+            <div>
+            <div class="form-group">
+                <label asp-for="@Model.ClubMember.Id" class="control-label"></label>
+                <input asp-for="@Model.ClubMember.Id" class="control-label" readonly/>
+            </div>
+            <div class="form-group">
+                <label asp-for="@Model.ClubMember.Name" class="control-label"></label>
+                <input asp-for="@Model.ClubMember.Name" class="control-label" readonly />
+            </div>
+            <div class="form-group">
+                <label asp-for="@Model.ClubMember.Age" class="control-label"></label>
+                <input asp-for="@Model.ClubMember.Age" class="control-label" readonly />
+            </div>
+            <div class="form-group">
+                <label asp-for="@Model.ClubMember.Email" class="control-label"></label>
+                <input asp-for="@Model.ClubMember.Email" class="control-label" readonly />
+            </div>
+            <div>
+                <a asp-page="EditMember" asp-route-id="@Model.ClubMember.Id" class="btn btn-primary">Edit</a>
+                <a asp-page="DeleteMember" asp-route-id="@Model.ClubMember.Id" class="btn btn-primary">Delete</a>
+                <a asp-page="Index" class="btn cancelbutton">Show all clubmembers</a>
+            </div>
+            </div>
+        </form>
+</div>

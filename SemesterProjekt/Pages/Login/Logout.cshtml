@@ -1,0 +1,14 @@
+﻿@page
+@model SemesterProjekt.Pages.Login.LogoutModel
+@{
+    ViewData["Title"] = "Log-out";
+}
+
+<h1>Account log-out</h1>
+<form method="post">
+    <div style="margin-bottom: 6px; width: 100%">
+        <h1>Log out?</h1>
+        <input type="submit" value="Log out" class="btn btn-primary" />
+        <a asp-page="Index" class="btn cancelbutton">Cancel</a>
+    </div>
+</form>

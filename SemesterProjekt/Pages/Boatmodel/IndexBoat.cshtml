@@ -7,11 +7,11 @@
 @*Anders*@
 
 <h1>List of boats</h1>
-<a asp-page="AddBoat"> create a new boat</a>
+<a asp-page="AddBoat" class="btn btn-primary">Add a new boat</a>
 <form method="post">
     <p>
-        Search <input type="text" asp-for="@Model.FilterCriteria" />
-        <input type="submit" value="Search" />
+        <input type="text" placeholder="Search..." asp-for="@Model.FilterCriteria" class="search"/>
+        <button type="submit" class="btn btn-primary"><i class="fa-solid fa-magnifying-glass"></i></button>
     </p>
 </form>
 
@@ -25,6 +25,8 @@
             <th>weight</th>
             <th>Minimumcrew</th>
             <th>boattype</th>
+            <th></th>
+            <th></th>
         </tr>
     </thead>
     <tbody>
@@ -38,6 +40,7 @@
                 <td>@item.Width</td>
                 <td>@item.Weight</td>
                 <td>@item.MinimumCrew</td>
+                <td></td>
                 <td> <a asp-page="EditBoat" asp-route-id=@item.Id>Edit</a></td>
                 <td> <a asp-page="DeleteBoat" asp-route-id=@item.Id>Delete</a></td>
             </tr>

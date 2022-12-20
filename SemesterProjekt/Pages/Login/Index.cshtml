@@ -1,11 +1,22 @@
 ﻿@page
 @model SemesterProjekt.Pages.Login.IndexModel
 @{
-    ViewData["Title"] = "Account log-in";
+    ViewData["Title"] = "Log-in";
 }
+
 <h1>Account log-in</h1>
 <form method="post">
-    Email: <input type="text" asp-for="@Model.Email" /><br />
-    Password: <input type="text" asp-for="@Model.Password" /><br />
-    <input type="submit" value="Log in" />
+    <div class="form-group">
+        <label asp-for="@Model.Email"></label>
+        <input type="text" asp-for="@Model.Email" />
+    </div>
+    <div class="form-group">
+        <label asp-for="@Model.Password"></label>
+        <input type="password" asp-for="@Model.Password" />
+    </div>
+    <div style="margin-bottom: 6px; width: 100%">
+    <input type="submit" value="Log in" class="btn btn-primary"/>
+    <a asp-page="Index" class="btn cancelbutton">Cancel</a>
+    </div>
+    <a asp-page="~/Clubmember/AddMember" class="btn btn-primary" style="width: 100%">Register</a>
 </form>

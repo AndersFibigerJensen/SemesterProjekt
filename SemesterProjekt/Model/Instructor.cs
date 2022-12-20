@@ -4,7 +4,7 @@
     {
         //List<Boat> TeachingVerified { get; set; }
 
-        public Instructor(int id, string name, int age, string email, string password) : base (id, name, age, email, password)
+        public Instructor(int id, string name, int age, string email, string password, string memberImage) : base (id, name, age, email, password, memberImage)
         {
 
         }
