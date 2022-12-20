@@ -7,6 +7,8 @@ namespace SemesterProjekt.Pages.Eventmodel
 {
     public class BoatToEventModel : PageModel
     {
+        
+
         private IEventRepository eventRepository;
         private IBoatRepository boatRepository;
         private IEventBoatRepository eventBoatRepository;

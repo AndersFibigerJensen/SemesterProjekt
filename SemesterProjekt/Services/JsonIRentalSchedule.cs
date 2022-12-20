@@ -8,6 +8,7 @@ namespace SemesterProjekt.Services
 {
     public class JsonIRentalSchedule : IRentalSchedule
     {
+        //Anders//
 
         string filepath = @"Data\RentalPeriod.json";
 
@@ -18,7 +19,7 @@ namespace SemesterProjekt.Services
 
             foreach (RentalPeriod period in periods)
             {
-                if(re.RentalperiodFrom>=period.RentalperiodFrom && re.RentalperiodTo>= period.RentalperiodTo && re.Boat==period.Boat)
+                if(re.RentalperiodFrom>=period.RentalperiodFrom && re.RentalperiodTo<= period.RentalperiodTo && re.Boatid==period.Boatid)
                 {
                     foreach (RentalPeriod ren in periods)
                     {
@@ -56,7 +57,7 @@ namespace SemesterProjekt.Services
                         {
                             item.RentalperiodFrom = re.RentalperiodFrom;
                             item.RentalperiodTo = re.RentalperiodTo;
-                            item.Boat = re.Boat;
+                            item.Boatid = re.Boatid;
                         }
                     }
                     JsonFileWriter.WritetoJsonRentalPeriod(periods, filepath);
