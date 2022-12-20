@@ -1,34 +1,30 @@
 [
   {
     "Id": 1,
-    "Name": "a",
+    "Name": "Event",
     "Description": "aaaaaaa",
     "FromDate": "0001-01-01T00:00:00",
-    "ToDate": "0001-01-01T00:00:00",
-    "joinedBoats": []
+    "ToDate": "0001-01-01T00:00:00"
   },
   {
     "Id": 2,
     "Name": "b",
     "Description": "bbbbpphhbb",
     "FromDate": "0001-01-01T00:00:00",
-    "ToDate": "0001-01-01T00:00:00",
-    "joinedBoats": []
+    "ToDate": "0001-01-01T00:00:00"
   },
   {
     "Id": 3,
     "Name": "pouls",
     "Description": "test",
     "FromDate": "2022-12-02T11:13:00",
-    "ToDate": "2022-12-17T11:13:00",
-    "joinedBoats": []
+    "ToDate": "2022-12-17T11:13:00"
   },
   {
     "Id": 3,
     "Name": "poul",
     "Description": "test",
     "FromDate": "2022-12-24T12:55:00",
-    "ToDate": "2022-12-24T12:55:00",
-    "joinedBoats": null
+    "ToDate": "2022-12-24T12:55:00"
   }
 ]

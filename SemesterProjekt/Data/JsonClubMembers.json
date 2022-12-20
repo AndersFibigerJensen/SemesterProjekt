@@ -2,10 +2,10 @@
   {
     "Id": 1,
     "Name": "Carl Nielsen",
-    "Age": 39,
+    "Age": 38,
     "Email": "carlnielsen@gmail.com",
     "Password": "password1",
-    "MemberImage": "generic_profileicon.jpg"
+    "MemberImage": "225d7088-beae-4767-b51f-9a1c6efb8097_manwithtie_pfp.jpg"
   },
   {
     "Id": 2,
@@ -13,7 +13,7 @@
     "Age": 52,
     "Email": "larslarsen@gmail.com",
     "Password": "password2",
-    "MemberImage": "generic_profileicon.jpg"
+    "MemberImage": "225d7088-beae-4767-b51f-9a1c6efb8097_manwithtie_pfp.jpg"
   },
   {
     "Id": 3,
@@ -29,7 +29,7 @@
     "Age": 23,
     "Email": "marial\u00F8kke@gmail.com",
     "Password": "password4",
-    "MemberImage": "generic_profileicon.jpg"
+    "MemberImage": "7e5a1045-7acf-436a-9dc7-912ac91536d8_businesswoman_pfp.jpg"
   },
   {
     "Id": 5,
@@ -37,7 +37,7 @@
     "Age": 15,
     "Email": "hannahbundg\u00E5rd@gmail.com",
     "Password": "password5",
-    "MemberImage": "generic_profileicon.jpg"
+    "MemberImage": "7e5a1045-7acf-436a-9dc7-912ac91536d8_businesswoman_pfp.jpg"
   },
   {
     "Id": 6,

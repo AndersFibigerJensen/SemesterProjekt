@@ -21,6 +21,7 @@
             <th>Name</th>
             <th>Age</th>
             <th></th>
+            <th></th>
         </tr>
     </thead>
     <tbody>
@@ -29,9 +30,10 @@
             <tr>
                 <td><img src="~/Images/ClubmemberImages/@item.MemberImage" class="rounded-circle"></td>
                 <td>@item.Id</td>
-                <td><a asp-page="PersonalMemberPage" asp-route-id="@item.Id">@item.Name</a></td>
+                <td><a asp-page="/PersonalMemberPage" asp-route-id="@item.Id">@item.Name</a></td>
                 <td>@item.Age</td>
-                <td><a asp-page="EditMember" asp-route-id="@item.Id">Edit</a> | <a asp-page="DeleteMember" asp-route-id="@item.Id">Delete</a></td>
+                <td><a asp-page="EditMember" asp-route-id="@item.Id" class="btn btn-primary">Edit</a></td>
+                <td><a asp-page="DeleteMember" asp-route-id="@item.Id" class="btn btn-primary">Delete</a></td>
             </tr>
         }
     </tbody>

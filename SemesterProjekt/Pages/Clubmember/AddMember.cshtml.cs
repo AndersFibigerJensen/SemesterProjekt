@@ -12,15 +12,14 @@ namespace SemesterProjekt.Pages.Clubmember
         private IWebHostEnvironment webHostEnvironment;
 
         [BindProperty]
-        public IFormFile MemberImage { get; set; }
-
+        public IFormFile Photo { get; set; }
         [BindProperty]
         public ClubMember ClubMember { get; set; }
 
         public AddMemberModel(IClubMemberRepository clubMemberRepository, IWebHostEnvironment webHost)
         {
             repo = clubMemberRepository;
-            webHost = webHostEnvironment;
+            webHostEnvironment = webHost;
         }
 
         public IActionResult OnGet()
@@ -30,7 +29,7 @@ namespace SemesterProjekt.Pages.Clubmember
 
         public IActionResult OnPost()
         {
-            if (MemberImage != null)
+            if (Photo != null)
             {
                 if (ClubMember.MemberImage != null)
                 {
@@ -45,17 +44,17 @@ namespace SemesterProjekt.Pages.Clubmember
 
         }
 
-        private string ProcessUploadedFile()
+            private string ProcessUploadedFile()
         {
             string uniqueFileName = null;
-            if (MemberImage != null)
+            if (Photo != null)
             {
-                string uploadsFolder = Path.Combine(webHostEnvironment.WebRootPath, "Images/ClubmemberImages");
-                uniqueFileName = Guid.NewGuid().ToString() + "_" + MemberImage.FileName;
+                string uploadsFolder = Path.Combine(webHostEnvironment.WebRootPath, "images/ClubmemberImages");
+                uniqueFileName = Guid.NewGuid().ToString() + "_" + Photo.FileName;
                 string filePath = Path.Combine(uploadsFolder, uniqueFileName);
                 using (var fileStream = new FileStream(filePath, FileMode.Create))
                 {
-                    MemberImage.CopyTo(fileStream);
+                    Photo.CopyTo(fileStream);
                 }
             }
             return uniqueFileName;

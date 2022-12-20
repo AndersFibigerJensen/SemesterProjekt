@@ -23,20 +23,11 @@
                 </button>
                 <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
                     <ul class="navbar-nav flex-grow-1" style="align-items: center;">
-                        @*
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-page="/Index">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-page="/Privacy">Privacy</a>
-                        </li>
-                        *@
                         
-                        @*sæt jeres links over det her punkt*@
                         @if (LoginService.GetLoggedUser() == null)
                         {
                             <li class="nav-item" style="margin-left: auto">
-                                <a class="nav-link text-dark" asp-area="" asp-page="/Login/Index">Log-in</a>
+                                <a class="nav-link text-dark" asp-area="" asp-page="/Login">Log-in</a>
                             </li>
                         }
                         else{
@@ -58,9 +49,9 @@
 
                             <li class="nav-item" style="margin-left: auto; display: flex;">
                                 <p class="nav-link text-dark" style="margin: 0; padding-right: 0">Hej</p>
-                                <a asp-page="Clubmember/PersonalMemberPage" asp-route-id="@LoginService.GetLoggedUser().Id" class="nav-link text-dark">@LoginService.GetLoggedUser().Name</a>
+                                <a asp-page="/PersonalMemberPage" asp-route-id="@LoginService.GetLoggedUser().Id" class="nav-link text-dark">@LoginService.GetLoggedUser().Name</a>
                             </li>
-                            <li><a asp-page="/Login/Logout" asp-area="" class="nav-link text-dark">Log-out</a></li>
+                            <li><a asp-page="/Logout" asp-area="" class="nav-link text-dark">Log-out</a></li>
                         }
 
                     </ul>

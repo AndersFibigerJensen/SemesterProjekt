@@ -35,8 +35,8 @@
 				<td>@item.PostId</td>
 				<td>@item.Title</td>
 				<td>@item.Text</td>
-				<td> <a asp-page="EditBlogPost" asp-route-postId=@item.PostId>Edit</a></td>
-                <td> <a asp-page="DeleteBlogPost" asp-route-postId=@item.PostId>Delete</a></td>
+				<td> <a asp-page="EditBlogPost" asp-route-postId=@item.PostId class="btn btn-primary">Edit</a></td>
+				<td> <a asp-page="DeleteBlogPost" asp-route-postId=@item.PostId class="btn btn-primary">Delete</a></td>
 			</tr>
 		}
 	</tbody>

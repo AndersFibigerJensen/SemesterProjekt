@@ -5,7 +5,7 @@
 }
 
 <h1>Add new member</h1>
-<form method="post">
+<form method="post" enctype="multipart/form-data">
     <div class="form-group">
         <label asp-for="@Model.ClubMember.Id"></label>
         <input asp-for="@Model.ClubMember.Id" />
@@ -27,9 +27,9 @@
         <input asp-for="@Model.ClubMember.Password" />
     </div>
     <div class="form-group">
-        <label asp-for="@Model.ClubMember.MemberImage" class="control-label">Image</label>
+        <label asp-for="@Model.Photo" class="control-label">Image</label>
         <div class="custom-file">
-            <input asp-for="@Model.ClubMember.MemberImage" class="custom-file-input form-control" type="file"/>
+            <input asp-for="@Model.Photo" class="custom-file-input form-control" type="file"/>
         </div>
     </div>
      <div>
