@@ -4,6 +4,8 @@ namespace SemesterProjekt.Model
 {
     public class RentalPeriod
     {
+        //Anders//
+
         [Required]
         [Range(typeof(int), "1", "1000", ErrorMessage = "Id er uden for intervallet")]
         public int Id { get; set; }

@@ -7,7 +7,9 @@ namespace SemesterProjekt.Services
 {
     public class JsonIBoatToEventRepository : IEventBoatRepository
     {
-        string filepath= @"Data\JsonEventBoat.json";
+        //Anders//
+
+        string filepath = @"Data\JsonEventBoat.json";
 
         public void AddEventToBoat(BoatToEvent be)
         {

@@ -2,6 +2,7 @@
 
 namespace SemesterProjekt.Model
 {
+    //Anders//
     public class ClubmemberToEvent
     {
         [Required]

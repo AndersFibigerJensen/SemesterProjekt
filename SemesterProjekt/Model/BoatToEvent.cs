@@ -4,6 +4,8 @@ namespace SemesterProjekt.Model
 {
     public class BoatToEvent
     {
+        //Anders//
+
         [Required]
         public int BoatId { get; set; }
 

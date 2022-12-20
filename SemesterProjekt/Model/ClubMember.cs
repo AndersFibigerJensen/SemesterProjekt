@@ -4,6 +4,7 @@ namespace SemesterProjekt.Model
 {
     public class ClubMember
     {
+
         [Required]
         public int Id { get; set; }
         [Required]

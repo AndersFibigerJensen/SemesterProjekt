@@ -6,6 +6,8 @@ namespace SemesterProjekt.Services
 {
     public class JsonClubmemberToEvent : IClubmemberEvent
     {
+        //Anders//
+
         string filepath = @"Data\JsonClubmemberEvent.json";
 
         public void AddClubmemberToEvent(ClubmemberToEvent ce)

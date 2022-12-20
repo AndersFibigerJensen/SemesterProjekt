@@ -8,6 +8,7 @@ namespace SemesterProjekt.Services
 {
     public class JsonIRentalSchedule : IRentalSchedule
     {
+        //Anders//
 
         string filepath = @"Data\RentalPeriod.json";
 
